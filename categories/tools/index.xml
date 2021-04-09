@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on ZhangJincheng&#39;s Blogs</title>
-    <link>http://ByteFlyCoding.github.io/categories/tools/</link>
+    <link>http://Blogs.ByteFly.site/categories/tools/</link>
     <description>Recent content in Tools on ZhangJincheng&#39;s Blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 01 Apr 2021 16:44:38 +0800</lastBuildDate><atom:link href="http://ByteFlyCoding.github.io/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Apr 2021 16:44:38 +0800</lastBuildDate><atom:link href="http://Blogs.ByteFly.site/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git_Notebook</title>
-      <link>http://ByteFlyCoding.github.io/2021/git_notebook/</link>
+      <link>http://Blogs.ByteFly.site/2021/git_notebook/</link>
       <pubDate>Thu, 01 Apr 2021 16:44:38 +0800</pubDate>
       
-      <guid>http://ByteFlyCoding.github.io/2021/git_notebook/</guid>
+      <guid>http://Blogs.ByteFly.site/2021/git_notebook/</guid>
       <description>Git_Notebook Debian/Ubuntu安装Git # For the latest stable version for your release of Debian/Ubuntu sudo apt install git # For Ubuntu, this PPA provides the latest stable upstream Git version sudo add-apt-repository ppa:git-core/ppa sudo apt update sudo apt install git 使用git的最小配置 git config --global user.name</description>
     </item>
     
