@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="ZhangJincheng">
+  <meta name="description" content="ZhangJincheng&#39;s Blogs.">
+  <meta name="keywords" content="Golang, Go, Linux, Kubernets, Docker, DataStruct, Algorithm, DataBase, redis, mysql, ElasticSearch">
+  
+  <link rel="prev" href="http://ByteFlyCoding.github.io/2021/linux_notes/" />
+  <link rel="next" href="http://ByteFlyCoding.github.io/2021/sql_notes/" />
+  <link rel="canonical" href="http://ByteFlyCoding.github.io/2021/git_notebook/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Git_Notebook | ZhangJincheng&#39;s Blogs
+       
+  </title>
+  <meta name="title" content="Git_Notebook | ZhangJincheng&#39;s Blogs">
+    
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/ByteFlyCoding.github.io\/"
+    },
+    "articleSection" : "posts",
+    "name" : "Git_Notebook",
+    "headline" : "Git_Notebook",
+    "description" : "Git_Notebook Debian\/Ubuntu安装Git # For the latest stable version for your release of Debian\/Ubuntu sudo apt install git # For Ubuntu, this PPA provides the latest stable upstream Git version sudo add-apt-repository ppa:git-core\/ppa sudo apt update sudo apt install git 使用git的最小配置 git config --global user.name",
+    "inLanguage" : "zh-cn",
+    "author" : "ZhangJincheng",
+    "creator" : "ZhangJincheng",
+    "publisher": "ZhangJincheng",
+    "accountablePerson" : "ZhangJincheng",
+    "copyrightHolder" : "ZhangJincheng",
+    "copyrightYear" : "2021",
+    "datePublished": "2021-04-01 16:44:38 \u002b0800 CST",
+    "dateModified" : "2021-04-01 16:44:38 \u002b0800 CST",
+    "url" : "http:\/\/ByteFlyCoding.github.io\/2021\/git_notebook\/",
+    "wordCount" : "1234",
+    "keywords" : [  "ZhangJincheng\u0027s Blogs"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    
+        <div class="top-scroll-bar"></div>
+    
+    <div class="container">
+        <div class="navbar-header header-logo">
+            
+            <span class="logo_mark" >></span>
+            <a href="http://ByteFlyCoding.github.io/">
+                <span class="logo_text" >$ cd /home/ </span>
+                <span class="logo_cursor" ></span>
+            </a>
+            
+        </div>
+        <div class="navbar-right">
+                
+                <span class="menu">
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                </span>
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     
+         <div class="top-scroll-bar"></div>
+     
+     <div class="container">
+        <div class="navbar-header">
+            <div class="header-logo">
+                
+                    <span class="logo_mark">></span>
+                    <a href="http://ByteFlyCoding.github.io/">
+                        <span class="logo_text">$ cd /home/ </span>
+                        <span class="logo_cursor"></span>
+                </a>
+                
+            </div>
+            <div class="navbar-right">
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
+                <div class="menu-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Git_Notebook</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://ByteFlyCoding.github.io/" rel="author">ZhangJincheng</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2021-04-01 itemprop="datePublished">April 1, 2021</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="http://ByteFlyCoding.github.io/categories/tools/"> Tools </a>
+                        
+                </span>
+                <span class="post-word-count">, 1234 words</span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h1 id="git_notebook">Git_Notebook</h1>
+<h1 id="debianubuntu安装git">Debian/Ubuntu安装Git</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># For the latest stable version for your release of Debian/Ubuntu</span>
+sudo apt install git
+<span style="color:#75715e"># For Ubuntu, this PPA provides the latest stable upstream Git version</span>
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt update
+sudo apt install git
+</code></pre></div><h2 id="使用git的最小配置">使用git的最小配置</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.name <span style="color:#e6db74">&#34;&lt;MyName&gt;&#34;</span>
+git config --global user.email <span style="color:#e6db74">&#34;&lt;MyEmail&gt;&#34;</span>
+</code></pre></div><h2 id="git-config的三个作用域">git config的三个作用域</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># --local --global --system缺省等同于--local</span>
+git config --local	<span style="color:#75715e"># --local只对某个仓库有效 </span>
+git config --global	<span style="color:#75715e"># --global对当前用户所有的仓库有效</span>
+git config --system	<span style="color:#75715e"># --system对系统所有登录的用户有效</span>
+</code></pre></div><h2 id="显示config的配置-加---list">显示config的配置， 加 &ndash;list</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --list --local
+git config --list --global
+git config --list --system
+</code></pre></div><h2 id="建git仓库">建Git仓库</h2>
+<p>两种场景：</p>
+<ol>
+<li>
+<p>把已有的项目代码纳入Git管理</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd &lt;ProjectFile&gt;
+git init
+</code></pre></div></li>
+<li>
+<p>新建的项目直接用Git管理</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd &lt;ProjectParentFile&gt;
+git init &lt;ProjectFileName&gt;	<span style="color:#75715e"># 会在当前路径下创建和项目名称同名的文件夹</span>
+cd &lt;ProjectFileName&gt;
+</code></pre></div></li>
+</ol>
+<h2 id="git仓库三大区">Git仓库三大区：</h2>
+<ul>
+<li>
+<p>Working Directory(工作区)</p>
+</li>
+<li>
+<p>Stage(暂存区)</p>
+</li>
+<li>
+<p>Repository(版本库)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># git version 2.x</span>
+git add &lt;files&gt;	<span style="color:#75715e"># 把文件添加到Stage</span>
+git add -u <span style="color:#75715e"># 仅监控已经被add的文件（即tracked file），他会将被修改或删除的文件提交到暂存区。add -u 不会提交新文件（untracked file）</span>
+git add --ignore-removal	<span style="color:#75715e"># 监控工作区的状态树，使用它会把工作时的所有变化提交到暂存区，包括文件内容修改(modified)以及新文件(new)，但不包括被删除的文件。</span>
+git add .	<span style="color:#75715e"># 监控工作区的状态树，使用它会把工作时的所有变化提交到暂存区，包括文件内容修改(modified)以及新文件(new)，包括被删除的文件。</span>
+git commit -m <span style="color:#e6db74">&#39;&lt;Comment&gt;&#39;</span>	<span style="color:#75715e"># 把文件提交到Repository</span>
+</code></pre></div><h2 id="给文件重命名的方法">给文件重命名的方法</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 法一：</span>
+mv &lt;file1&gt; &lt;file2&gt;
+git add &lt;file2&gt;
+git rm &lt;file1&gt;
+git commit -m <span style="color:#e6db74">&#39;Modified fileName&#39;</span>
+  
+git reset --hard	<span style="color:#75715e"># 危险操作：该操作会把工作区与暂存区的修改都删掉</span>
+  
+<span style="color:#75715e"># 法二：</span>
+git mv &lt;file1&gt; &lt;file2&gt;
+git commit -m <span style="color:#e6db74">&#39;Modified fileName&#39;</span>
+</code></pre></div><h2 id="通过git-log查看版本演变的历史">通过git log查看版本演变的历史</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log
+git log --oneline
+git log -n&lt;num&gt; --oneline
+git branch -av
+git check out -b &lt;BranchName&gt;	<span style="color:#75715e"># 创建并切换到&lt;BranchName&gt;分支上</span>
+git log --all --graph
+git log --oneline --all -n&lt;num&gt; --graph
+</code></pre></div><h2 id="探秘-git-文件">探秘 <code>.git</code> 文件</h2>
+<p><a href="https://juejin.cn/post/6844903986839945229">参考</a></p>
+<ul>
+<li>
+<p>config: config 文件顾名思义就是包含项目特有的配置选项</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"></code></pre></div></li>
+</ul>
+<p>cat .git/config</p>
+<pre><code>
+* HEAD: 此文件永远存储当前位置指针，指向当前工作区的分支
+
+```bash
+</code></pre></li>
+</ul>
+<p>cat .git/HEAD
+```</p>
+<ul>
+<li>
+<p>logs: logs就是用来记录操作信息的</p>
+</li>
+<li>
+<p>refs: refs文件夹存储着分支和标签的引用</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd .git/refs/ <span style="color:#f92672">&amp;&amp;</span> cd heads/	<span style="color:#75715e"># .git/refs/HEAD 存储着各个分支的引用</span>
+cd .git/refs/ <span style="color:#f92672">&amp;&amp;</span> cd tags/	<span style="color:#75715e"># .git/refs/tags 储存着各个标签的引用 tag指向一个commit</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git cat-file -t + &lt;hash值&gt;	<span style="color:#75715e"># 可以查看hash对应的类型</span>
+git cat-file -p + &lt;hash值&gt;	<span style="color:#75715e"># 可以查看hash对应的内容</span>
+</code></pre></div></li>
+<li>
+<p>objects: 在初始化的时候，objects里有两个空的文件夹：info和pack。Git 往磁盘保存对象时默认使用的格式叫松散对象 (loose object) 格式，当你对同一个文件修改哪怕一行，git 都会使用全新的文件存储这个修改了的文件，放在了objects中。Git 时不时地将这些对象打包至一个叫 packfile 的二进制文件以节省空间并提高效率，当版本库中有太多的松散对象，或者你手动执行 <code>git gc</code> 命令，或者你向远程服务器执行推送时，Git 都会这样做。</p>
+</li>
+</ul>
+<h2 id="commit-tree-blob三者之间的关系">commit tree blob三者之间的关系</h2>
+<p><a href="https://juejin.cn/post/6844904190058184718">参考</a></p>
+<h2 id="github-配置公私钥">github 配置公私钥</h2>
+<p>why: 配置了公私钥后对远程分支进行操作不需要输入密码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Step 1:检查本地是否有公钥</span>
+ssh-keygen -t rsa -C <span style="color:#e6db74">&#34;&lt;MyEmail&gt;&#34;</span>
+<span style="color:#75715e"># Step 2: 将~/.ssh/id_rsa.pub 复制并粘贴进Github的ssh key中</span>
+</code></pre></div>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>ZhangJincheng </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://ByteFlyCoding.github.io/2021/git_notebook/>http://ByteFlyCoding.github.io/2021/git_notebook/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://ByteFlyCoding.github.io/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://ByteFlyCoding.github.io/2021/linux_notes/" class="prev" rel="prev" title="Linux_Notes"><i class="iconfont icon-left"></i>&nbsp;Linux_Notes</a>
+         
+        
+        <a href="http://ByteFlyCoding.github.io/2021/sql_notes/" class="next" rel="next" title="SQL">SQL&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+        
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2017 - 2021</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://ByteFlyCoding.github.io/">ZhangJincheng</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script> pangu.spacingPage();  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

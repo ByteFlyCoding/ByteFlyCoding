@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on ZhangJincheng&#39;s Blogs</title>
+    <link>http://ByteFlyCoding.github.io/tags/linux/</link>
+    <description>Recent content in Linux on ZhangJincheng&#39;s Blogs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 31 Mar 2021 20:21:29 +0800</lastBuildDate><atom:link href="http://ByteFlyCoding.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux_Notes</title>
+      <link>http://ByteFlyCoding.github.io/2021/linux_notes/</link>
+      <pubDate>Wed, 31 Mar 2021 20:21:29 +0800</pubDate>
+      
+      <guid>http://ByteFlyCoding.github.io/2021/linux_notes/</guid>
+      <description>帮助命令 man 帮助（manual缩写） 举例： man ls 获取ls命令的帮助 man man 获取man命令的帮助，有很多重名的 man 7 man 获取man命令第7章的命令 man -a passwd 不</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu_20.04_LTS_Configure</title>
+      <link>http://ByteFlyCoding.github.io/2021/ubuntu_configure/</link>
+      <pubDate>Wed, 31 Mar 2021 19:45:02 +0800</pubDate>
+      
+      <guid>http://ByteFlyCoding.github.io/2021/ubuntu_configure/</guid>
+      <description>Ubuntu 20.04 安装记录以及配置与美化 换源（在安装界面就可以在设置里换源了） 卸载 snap 列出已经安装的 snap 包 sudo snap list 卸载 snap 中安装的包 sudo snap remove 卸载 snap-core sudo apt autoremove &amp;ndash;purge snapd Ubuntu 20.04 ssr 安</description>
+    </item>
+    
+  </channel>
+</rss>

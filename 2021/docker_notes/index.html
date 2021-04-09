@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="ZhangJincheng">
+  <meta name="description" content="ZhangJincheng&#39;s Blogs.">
+  <meta name="keywords" content="Golang, Go, Linux, Kubernets, Docker, DataStruct, Algorithm, DataBase, redis, mysql, ElasticSearch">
+  
+  <link rel="prev" href="http://ByteFlyCoding.github.io/2021/ubuntu_configure/" />
+  <link rel="next" href="http://ByteFlyCoding.github.io/2021/golang_notes/" />
+  <link rel="canonical" href="http://ByteFlyCoding.github.io/2021/docker_notes/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Docker_Notes | ZhangJincheng&#39;s Blogs
+       
+  </title>
+  <meta name="title" content="Docker_Notes | ZhangJincheng&#39;s Blogs">
+    
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/ByteFlyCoding.github.io\/"
+    },
+    "articleSection" : "posts",
+    "name" : "Docker_Notes",
+    "headline" : "Docker_Notes",
+    "description" : "Docker_Notes Install Docker Engine on Ubuntu(Best Practice) Install Reference\nPrerequisites OS requirements To install Docker Engine, you need the 64-bit version of one of these Ubuntu versions:\n Ubuntu Groovy 20.10 Ubuntu Focal 20.04 (LTS) Ubuntu Bionic 18.04 (LTS) Ubuntu Xenial 16.04 (LTS)  Docker Engine is supported on x86_64 (or amd64), armhf, and arm64 architectures.\nUninstall old versions sudo apt remove docker docker-engine docker.io containerd runc It’s OK if apt-get reports that none of these packages are installed.",
+    "inLanguage" : "zh-cn",
+    "author" : "ZhangJincheng",
+    "creator" : "ZhangJincheng",
+    "publisher": "ZhangJincheng",
+    "accountablePerson" : "ZhangJincheng",
+    "copyrightHolder" : "ZhangJincheng",
+    "copyrightYear" : "2021",
+    "datePublished": "2021-03-31 19:45:02 \u002b0800 CST",
+    "dateModified" : "2021-03-31 19:45:02 \u002b0800 CST",
+    "url" : "http:\/\/ByteFlyCoding.github.io\/2021\/docker_notes\/",
+    "wordCount" : "242",
+    "keywords" : [ "Container","Docker","Cloud", "ZhangJincheng\u0027s Blogs"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    
+        <div class="top-scroll-bar"></div>
+    
+    <div class="container">
+        <div class="navbar-header header-logo">
+            
+            <span class="logo_mark" >></span>
+            <a href="http://ByteFlyCoding.github.io/">
+                <span class="logo_text" >$ cd /home/ </span>
+                <span class="logo_cursor" ></span>
+            </a>
+            
+        </div>
+        <div class="navbar-right">
+                
+                <span class="menu">
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                </span>
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     
+         <div class="top-scroll-bar"></div>
+     
+     <div class="container">
+        <div class="navbar-header">
+            <div class="header-logo">
+                
+                    <span class="logo_mark">></span>
+                    <a href="http://ByteFlyCoding.github.io/">
+                        <span class="logo_text">$ cd /home/ </span>
+                        <span class="logo_cursor"></span>
+                </a>
+                
+            </div>
+            <div class="navbar-right">
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
+                <div class="menu-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Docker_Notes</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://ByteFlyCoding.github.io/" rel="author">ZhangJincheng</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2021-03-31 itemprop="datePublished">March 31, 2021</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="http://ByteFlyCoding.github.io/categories/kubernets-and-docker/"> Kubernets and Docker </a>
+                        
+                </span>
+                <span class="post-word-count">, 242 words</span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h1 id="docker_notes">Docker_Notes</h1>
+<h2 id="install-docker-engine-on-ubuntubest-practice">Install Docker Engine on Ubuntu(Best Practice)</h2>
+<p><a href="https://docs.docker.com/engine/install/">Install Reference</a></p>
+<h3 id="prerequisites">Prerequisites</h3>
+<h4 id="os-requirements">OS requirements</h4>
+<p>To install Docker Engine, you need the 64-bit version of one of these Ubuntu versions:</p>
+<ul>
+<li>Ubuntu Groovy 20.10</li>
+<li>Ubuntu Focal 20.04 (LTS)</li>
+<li>Ubuntu Bionic 18.04 (LTS)</li>
+<li>Ubuntu Xenial 16.04 (LTS)</li>
+</ul>
+<p>Docker Engine is supported on <code>x86_64</code> (or <code>amd64</code>), <code>armhf</code>, and <code>arm64</code> architectures.</p>
+<h4 id="uninstall-old-versions">Uninstall old versions</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt remove docker docker-engine docker.io containerd runc
+</code></pre></div><p>It’s OK if apt-get reports that none of these packages are installed.</p>
+<h3 id="installation-methods-install-using-the-repository">Installation methods: Install using the repository</h3>
+<h4 id="set-up-the-repository">SET UP THE REPOSITORY</h4>
+<ol>
+<li>
+<p>Update the apt package index and install packages to allow apt to use a repository over HTTPS:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
+sudo apt install apt-transport-https ca-certificates curl gnupg lsb-release
+</code></pre></div></li>
+<li>
+<p>Add Docker’s official GPG key:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+</code></pre></div></li>
+<li>
+<p>Use the following command to set up the <strong>stable</strong> repository.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu </span><span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span><span style="color:#e6db74"> stable&#34;</span> | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</code></pre></div></li>
+</ol>
+<h4 id="install-docker-engine">INSTALL DOCKER ENGINE</h4>
+<ol>
+<li>
+<p>Update the <code>apt</code> package index, and install the <em>latest version</em> of Docker Engine and containerd：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io
+</code></pre></div></li>
+<li>
+<p>Verify that Docker Engine is installed correctly by running the <code>hello-world</code> image.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo docker run hello-world
+</code></pre></div></li>
+</ol>
+<h2 id="uninstall-docker-engine">Uninstall Docker Engine</h2>
+<ol>
+<li>
+<p>Uninstall the Docker Engine, CLI, and Containerd packages:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt autoremove --purge docker-ce docker-ce-cli containerd.io
+</code></pre></div></li>
+<li>
+<p>Images, containers, volumes, or customized configuration files on your host are not automatically removed. To delete all images, containers, and volumes:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd
+</code></pre></div></li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>ZhangJincheng </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://ByteFlyCoding.github.io/2021/docker_notes/>http://ByteFlyCoding.github.io/2021/docker_notes/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://ByteFlyCoding.github.io/tags/container/">
+                    #Container</a></span>
+            
+            <span class="tag"><a href="http://ByteFlyCoding.github.io/tags/docker/">
+                    #Docker</a></span>
+            
+            <span class="tag"><a href="http://ByteFlyCoding.github.io/tags/cloud/">
+                    #Cloud</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://ByteFlyCoding.github.io/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://ByteFlyCoding.github.io/2021/ubuntu_configure/" class="prev" rel="prev" title="Ubuntu_20.04_LTS_Configure"><i class="iconfont icon-left"></i>&nbsp;Ubuntu_20.04_LTS_Configure</a>
+         
+        
+        <a href="http://ByteFlyCoding.github.io/2021/golang_notes/" class="next" rel="next" title="Golang_Notes">Golang_Notes&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+        
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2017 - 2021</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://ByteFlyCoding.github.io/">ZhangJincheng</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script> pangu.spacingPage();  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
