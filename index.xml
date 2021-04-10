@@ -1,28 +1,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ZhangJincheng&#39;s Blogs on ZhangJincheng&#39;s Blogs</title>
-    <link>https://byteflycoding.github.io/</link>
+    <link>/</link>
     <description>Recent content in ZhangJincheng&#39;s Blogs on ZhangJincheng&#39;s Blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 09 Apr 2021 20:13:52 +0800</lastBuildDate>
-    <atom:link href="https://byteflycoding.github.io/" rel="self" type="application/rss+xml" />
+    <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Posts</title>
-      <link>https://byteflycoding.github.io/posts/</link>
+      <link>/posts/</link>
       <pubDate>Fri, 09 Apr 2021 20:13:52 +0800</pubDate>
       
-      <guid>https://byteflycoding.github.io/posts/</guid>
+      <guid>/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://byteflycoding.github.io/about/</link>
+      <link>/about/</link>
       <pubDate>Wed, 31 Mar 2021 12:23:38 +0800</pubDate>
       
-      <guid>https://byteflycoding.github.io/about/</guid>
+      <guid>/about/</guid>
       <description>&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
 &lt;p&gt;A Computer Engineer who like learning fresh information tecnology.&lt;/p&gt;
 &lt;p&gt;Contact me:&lt;/p&gt;
