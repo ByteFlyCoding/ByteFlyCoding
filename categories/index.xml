@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on ZhangJincheng&#39;s Blogs</title>
-    <link>/categories/</link>
+    <link>https://ByteFlyCoding.github.io/categories/</link>
     <description>Recent content in Categories on ZhangJincheng&#39;s Blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 09 Apr 2021 20:13:52 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Apr 2021 20:13:52 +0800</lastBuildDate><atom:link href="https://ByteFlyCoding.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SQL</title>
-      <link>/categories/sql/</link>
+      <link>https://ByteFlyCoding.github.io/categories/sql/</link>
       <pubDate>Fri, 09 Apr 2021 20:13:52 +0800</pubDate>
       
-      <guid>/categories/sql/</guid>
+      <guid>https://ByteFlyCoding.github.io/categories/sql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tools</title>
-      <link>/categories/tools/</link>
+      <link>https://ByteFlyCoding.github.io/categories/tools/</link>
       <pubDate>Thu, 01 Apr 2021 16:44:38 +0800</pubDate>
       
-      <guid>/categories/tools/</guid>
+      <guid>https://ByteFlyCoding.github.io/categories/tools/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>/categories/linux/</link>
+      <link>https://ByteFlyCoding.github.io/categories/linux/</link>
       <pubDate>Wed, 31 Mar 2021 20:21:29 +0800</pubDate>
       
-      <guid>/categories/linux/</guid>
+      <guid>https://ByteFlyCoding.github.io/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Golang_Notes</title>
-      <link>/categories/golang_notes/</link>
+      <link>https://ByteFlyCoding.github.io/categories/golang_notes/</link>
       <pubDate>Wed, 31 Mar 2021 20:13:52 +0800</pubDate>
       
-      <guid>/categories/golang_notes/</guid>
+      <guid>https://ByteFlyCoding.github.io/categories/golang_notes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernets and Docker</title>
-      <link>/categories/kubernets-and-docker/</link>
+      <link>https://ByteFlyCoding.github.io/categories/kubernets-and-docker/</link>
       <pubDate>Wed, 31 Mar 2021 19:45:02 +0800</pubDate>
       
-      <guid>/categories/kubernets-and-docker/</guid>
+      <guid>https://ByteFlyCoding.github.io/categories/kubernets-and-docker/</guid>
       <description></description>
     </item>
     

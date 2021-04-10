@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on ZhangJincheng&#39;s Blogs</title>
-    <link>/posts/</link>
+    <link>https://ByteFlyCoding.github.io/posts/</link>
     <description>Recent content in Posts on ZhangJincheng&#39;s Blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 09 Apr 2021 20:13:52 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Apr 2021 20:13:52 +0800</lastBuildDate><atom:link href="https://ByteFlyCoding.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SQL</title>
-      <link>/2021/sql_notes/</link>
+      <link>https://ByteFlyCoding.github.io/2021/sql_notes/</link>
       <pubDate>Fri, 09 Apr 2021 20:13:52 +0800</pubDate>
       
-      <guid>/2021/sql_notes/</guid>
+      <guid>https://ByteFlyCoding.github.io/2021/sql_notes/</guid>
       <description>SQL_Notes 当今的数据处理可以分为两大类： OLTP(On-Line transaction processing):联机事务处理：OLTP 是传统关系型数据库的主要应用 用来执行一些基本的、日常的事务</description>
     </item>
     
     <item>
       <title>Git_Notebook</title>
-      <link>/2021/git_notebook/</link>
+      <link>https://ByteFlyCoding.github.io/2021/git_notebook/</link>
       <pubDate>Thu, 01 Apr 2021 16:44:38 +0800</pubDate>
       
-      <guid>/2021/git_notebook/</guid>
+      <guid>https://ByteFlyCoding.github.io/2021/git_notebook/</guid>
       <description>Git_Notebook Debian/Ubuntu安装Git # For the latest stable version for your release of Debian/Ubuntu sudo apt install git # For Ubuntu, this PPA provides the latest stable upstream Git version sudo add-apt-repository ppa:git-core/ppa sudo apt update sudo apt install git 使用git的最小配置 git config --global user.name</description>
     </item>
     
     <item>
       <title>Linux_Notes</title>
-      <link>/2021/linux_notes/</link>
+      <link>https://ByteFlyCoding.github.io/2021/linux_notes/</link>
       <pubDate>Wed, 31 Mar 2021 20:21:29 +0800</pubDate>
       
-      <guid>/2021/linux_notes/</guid>
+      <guid>https://ByteFlyCoding.github.io/2021/linux_notes/</guid>
       <description>帮助命令 man 帮助（manual缩写） 举例： man ls 获取ls命令的帮助 man man 获取man命令的帮助，有很多重名的 man 7 man 获取man命令第7章的命令 man -a passwd 不</description>
     </item>
     
     <item>
       <title>Golang_Notes</title>
-      <link>/2021/golang_notes/</link>
+      <link>https://ByteFlyCoding.github.io/2021/golang_notes/</link>
       <pubDate>Wed, 31 Mar 2021 20:13:52 +0800</pubDate>
       
-      <guid>/2021/golang_notes/</guid>
+      <guid>https://ByteFlyCoding.github.io/2021/golang_notes/</guid>
       <description>go语言清除go mod 缓存 go clean --modcache</description>
     </item>
     
     <item>
       <title>Docker_Notes</title>
-      <link>/2021/docker_notes/</link>
+      <link>https://ByteFlyCoding.github.io/2021/docker_notes/</link>
       <pubDate>Wed, 31 Mar 2021 19:45:02 +0800</pubDate>
       
-      <guid>/2021/docker_notes/</guid>
+      <guid>https://ByteFlyCoding.github.io/2021/docker_notes/</guid>
       <description>Docker_Notes Install Docker Engine on Ubuntu(Best Practice) Install Reference
 Prerequisites OS requirements To install Docker Engine, you need the 64-bit version of one of these Ubuntu versions:
  Ubuntu Groovy 20.10 Ubuntu Focal 20.04 (LTS) Ubuntu Bionic 18.04 (LTS) Ubuntu Xenial 16.04 (LTS)  Docker Engine is supported on x86_64 (or amd64), armhf, and arm64 architectures.
@@ -57,10 +57,10 @@ Uninstall old versions sudo apt remove docker docker-engine docker.io containerd
     
     <item>
       <title>Ubuntu_20.04_LTS_Configure</title>
-      <link>/2021/ubuntu_configure/</link>
+      <link>https://ByteFlyCoding.github.io/2021/ubuntu_configure/</link>
       <pubDate>Wed, 31 Mar 2021 19:45:02 +0800</pubDate>
       
-      <guid>/2021/ubuntu_configure/</guid>
+      <guid>https://ByteFlyCoding.github.io/2021/ubuntu_configure/</guid>
       <description>Ubuntu 20.04 安装记录以及配置与美化 换源（在安装界面就可以在设置里换源了） 卸载 snap 列出已经安装的 snap 包 sudo snap list 卸载 snap 中安装的包 sudo snap remove 卸载 snap-core sudo apt autoremove &amp;ndash;purge snapd Ubuntu 20.04 ssr 安</description>
     </item>
     

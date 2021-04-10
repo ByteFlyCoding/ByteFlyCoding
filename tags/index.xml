@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on ZhangJincheng&#39;s Blogs</title>
-    <link>/tags/</link>
+    <link>https://ByteFlyCoding.github.io/tags/</link>
     <description>Recent content in Tags on ZhangJincheng&#39;s Blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 09 Apr 2021 20:13:52 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Apr 2021 20:13:52 +0800</lastBuildDate><atom:link href="https://ByteFlyCoding.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SQL</title>
-      <link>/tags/sql/</link>
+      <link>https://ByteFlyCoding.github.io/tags/sql/</link>
       <pubDate>Fri, 09 Apr 2021 20:13:52 +0800</pubDate>
       
-      <guid>/tags/sql/</guid>
+      <guid>https://ByteFlyCoding.github.io/tags/sql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>/tags/linux/</link>
+      <link>https://ByteFlyCoding.github.io/tags/linux/</link>
       <pubDate>Wed, 31 Mar 2021 20:21:29 +0800</pubDate>
       
-      <guid>/tags/linux/</guid>
+      <guid>https://ByteFlyCoding.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Golang</title>
-      <link>/tags/golang/</link>
+      <link>https://ByteFlyCoding.github.io/tags/golang/</link>
       <pubDate>Wed, 31 Mar 2021 20:13:52 +0800</pubDate>
       
-      <guid>/tags/golang/</guid>
+      <guid>https://ByteFlyCoding.github.io/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cloud</title>
-      <link>/tags/cloud/</link>
+      <link>https://ByteFlyCoding.github.io/tags/cloud/</link>
       <pubDate>Wed, 31 Mar 2021 19:45:02 +0800</pubDate>
       
-      <guid>/tags/cloud/</guid>
+      <guid>https://ByteFlyCoding.github.io/tags/cloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Container</title>
-      <link>/tags/container/</link>
+      <link>https://ByteFlyCoding.github.io/tags/container/</link>
       <pubDate>Wed, 31 Mar 2021 19:45:02 +0800</pubDate>
       
-      <guid>/tags/container/</guid>
+      <guid>https://ByteFlyCoding.github.io/tags/container/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>/tags/docker/</link>
+      <link>https://ByteFlyCoding.github.io/tags/docker/</link>
       <pubDate>Wed, 31 Mar 2021 19:45:02 +0800</pubDate>
       
-      <guid>/tags/docker/</guid>
+      <guid>https://ByteFlyCoding.github.io/tags/docker/</guid>
       <description></description>
     </item>
     
