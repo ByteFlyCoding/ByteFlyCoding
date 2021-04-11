@@ -55,7 +55,7 @@
     "datePublished": "2021-04-01 16:44:38 \u002b0800 CST",
     "dateModified" : "2021-04-01 16:44:38 \u002b0800 CST",
     "url" : "https:\/\/ByteFlyCoding.github.io\/2021\/git_notebook\/",
-    "wordCount" : "1365",
+    "wordCount" : "1418",
     "keywords" : [  "ZhangJincheng\u0027s Blogs"]
 }
 </script>
@@ -152,7 +152,7 @@
                         <a href="https://ByteFlyCoding.github.io/categories/tools/"> Tools </a>
                         
                 </span>
-                <span class="post-word-count">, 1365 words</span>
+                <span class="post-word-count">, 1418 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -247,18 +247,12 @@ git log --oneline --all -n&lt;num&gt; --graph
 <ul>
 <li>
 <p>config: config 文件顾名思义就是包含项目特有的配置选项</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"></code></pre></div></li>
-</ul>
-<p>cat .git/config</p>
-<pre><code>
-* HEAD: 此文件永远存储当前位置指针，指向当前工作区的分支
-
-```bash
-</code></pre></li>
-</ul>
-<p>cat .git/HEAD
-```</p>
-<ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat .git/config
+</code></pre></div></li>
+<li>
+<p>HEAD: 此文件永远存储当前位置指针，指向当前工作区的分支</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat .git/HEAD
+</code></pre></div></li>
 <li>
 <p>logs: logs就是用来记录操作信息的</p>
 </li>
@@ -266,9 +260,12 @@ git log --oneline --all -n&lt;num&gt; --graph
 <p>refs: refs文件夹存储着分支和标签的引用</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd .git/refs/ <span style="color:#f92672">&amp;&amp;</span> cd heads/	<span style="color:#75715e"># .git/refs/HEAD 存储着各个分支的引用</span>
 cd .git/refs/ <span style="color:#f92672">&amp;&amp;</span> cd tags/	<span style="color:#75715e"># .git/refs/tags 储存着各个标签的引用 tag指向一个commit</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git cat-file -t + &lt;hash值&gt;	<span style="color:#75715e"># 可以查看hash对应的类型</span>
+    
+git cat-file -t + &lt;hash值&gt;	<span style="color:#75715e"># 可以查看hash对应的类型</span>
 git cat-file -p + &lt;hash值&gt;	<span style="color:#75715e"># 可以查看hash对应的内容</span>
 </code></pre></div></li>
+</ul>
+</li>
 <li>
 <p>objects: 在初始化的时候，objects里有两个空的文件夹：info和pack。Git 往磁盘保存对象时默认使用的格式叫松散对象 (loose object) 格式，当你对同一个文件修改哪怕一行，git 都会使用全新的文件存储这个修改了的文件，放在了objects中。Git 时不时地将这些对象打包至一个叫 packfile 的二进制文件以节省空间并提高效率，当版本库中有太多的松散对象，或者你手动执行 <code>git gc</code> 命令，或者你向远程服务器执行推送时，Git 都会这样做。</p>
 </li>
@@ -293,11 +290,17 @@ git cat-file -p + &lt;hash值&gt;	<span style="color:#75715e"># 可以查看hash
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout -b &lt;new-branch-name&gt; &lt;commit_Hash&gt;
 </code></pre></div></li>
 </ul>
-<h2 id="github-配置公私钥">github 配置公私钥</h2>
+<h2 id="head与branch">HEAD与branch</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git diff HEAD HEAD~&lt;n&gt;	<span style="color:#75715e"># 前面n阶祖先</span>
+git diff HEAD HEAD^	<span style="color:#75715e"># 一个^表示一阶祖先</span>
+</code></pre></div><h2 id="怎么删除不需要的git分支">怎么删除不需要的git分支</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch -d &lt;branchName&gt;
+git branch -D
+</code></pre></div><h2 id="github-配置公私钥">github 配置公私钥</h2>
 <p>why: 配置了公私钥后对远程分支进行操作不需要输入密码</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Step 1:检查本地是否有公钥</span>
 ssh-keygen -t rsa -C <span style="color:#e6db74">&#34;&lt;MyEmail&gt;&#34;</span>
-<span style="color:#75715e"># Step 2: 将~/.ssh/id_rsa.pub 复制并粘贴进Github的ssh key中</span>
+<span style="color:#75715e"># Step 2: 将~/.ssh/id_rsa.pub 复制并粘贴进Github的ssh key中  </span>
 </code></pre></div><h2 id="把本地仓库同步到github上">把本地仓库同步到GitHub上</h2>
 
     </div>
