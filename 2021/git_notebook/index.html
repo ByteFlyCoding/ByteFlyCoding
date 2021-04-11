@@ -55,7 +55,7 @@
     "datePublished": "2021-04-01 16:44:38 \u002b0800 CST",
     "dateModified" : "2021-04-01 16:44:38 \u002b0800 CST",
     "url" : "https:\/\/ByteFlyCoding.github.io\/2021\/git_notebook\/",
-    "wordCount" : "1234",
+    "wordCount" : "1365",
     "keywords" : [  "ZhangJincheng\u0027s Blogs"]
 }
 </script>
@@ -152,7 +152,7 @@
                         <a href="https://ByteFlyCoding.github.io/categories/tools/"> Tools </a>
                         
                 </span>
-                <span class="post-word-count">, 1234 words</span>
+                <span class="post-word-count">, 1365 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -275,12 +275,31 @@ git cat-file -p + &lt;hash值&gt;	<span style="color:#75715e"># 可以查看hash
 </ul>
 <h2 id="commit-tree-blob三者之间的关系">commit tree blob三者之间的关系</h2>
 <p><a href="https://juejin.cn/post/6844904190058184718">参考</a></p>
+<h2 id="分离头指针detached-head情况下的注意事项">分离头指针（detached HEAD）情况下的注意事项</h2>
+<ul>
+<li>
+<p>detached HEAD(分离头指针的状态)：HEAD没有指向任何一个分支</p>
+</li>
+<li>
+<p>git进入到分离头指针状态：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout &lt;commit_Hash&gt; <span style="color:#f92672">&amp;&amp;</span> git status
+</code></pre></div></li>
+<li>
+<p>分离头指针的情况下抛弃变更：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout &lt;branch_Name&gt;
+</code></pre></div></li>
+<li>
+<p>分离头指针情况下为该变更创建分支：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout -b &lt;new-branch-name&gt; &lt;commit_Hash&gt;
+</code></pre></div></li>
+</ul>
 <h2 id="github-配置公私钥">github 配置公私钥</h2>
 <p>why: 配置了公私钥后对远程分支进行操作不需要输入密码</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Step 1:检查本地是否有公钥</span>
 ssh-keygen -t rsa -C <span style="color:#e6db74">&#34;&lt;MyEmail&gt;&#34;</span>
 <span style="color:#75715e"># Step 2: 将~/.ssh/id_rsa.pub 复制并粘贴进Github的ssh key中</span>
-</code></pre></div>
+</code></pre></div><h2 id="把本地仓库同步到github上">把本地仓库同步到GitHub上</h2>
+
     </div>
 
     <div class="post-copyright">

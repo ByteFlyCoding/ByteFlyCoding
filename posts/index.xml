@@ -6,7 +6,16 @@
     <description>Recent content in Posts on ZhangJincheng&#39;s Blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 09 Apr 2021 20:13:52 +0800</lastBuildDate><atom:link href="https://ByteFlyCoding.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Apr 2021 09:27:18 +0800</lastBuildDate><atom:link href="https://ByteFlyCoding.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode</title>
+      <link>https://ByteFlyCoding.github.io/2021/leetcode/</link>
+      <pubDate>Sun, 11 Apr 2021 09:27:18 +0800</pubDate>
+      
+      <guid>https://ByteFlyCoding.github.io/2021/leetcode/</guid>
+      <description>26. 删除有序数组中的重复项 法一： func removeDuplicates(nums []int) int { for i := len(nums) - 1; i &amp;gt; 0; i-- { if nums[i] == nums[i-1] { nums = append(nums[:i-1], nums[i:]...) } } return len(nums) } 复杂度分析： 时间复杂度：O(n) 空间复杂度：O(1</description>
+    </item>
+    
     <item>
       <title>SQL</title>
       <link>https://ByteFlyCoding.github.io/2021/sql_notes/</link>

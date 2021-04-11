@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Double Points on ZhangJincheng&#39;s Blogs</title>
+    <link>https://ByteFlyCoding.github.io/tags/double-points/</link>
+    <description>Recent content in Double Points on ZhangJincheng&#39;s Blogs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 11 Apr 2021 09:27:18 +0800</lastBuildDate><atom:link href="https://ByteFlyCoding.github.io/tags/double-points/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode</title>
+      <link>https://ByteFlyCoding.github.io/2021/leetcode/</link>
+      <pubDate>Sun, 11 Apr 2021 09:27:18 +0800</pubDate>
+      
+      <guid>https://ByteFlyCoding.github.io/2021/leetcode/</guid>
+      <description>26. 删除有序数组中的重复项 法一： func removeDuplicates(nums []int) int { for i := len(nums) - 1; i &amp;gt; 0; i-- { if nums[i] == nums[i-1] { nums = append(nums[:i-1], nums[i:]...) } } return len(nums) } 复杂度分析： 时间复杂度：O(n) 空间复杂度：O(1</description>
+    </item>
+    
+  </channel>
+</rss>
