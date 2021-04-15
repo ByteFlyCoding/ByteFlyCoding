@@ -6,14 +6,23 @@
     <description>Recent content in Posts on ZhangJincheng&#39;s Blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 11 Apr 2021 09:27:18 +0800</lastBuildDate><atom:link href="https://ByteFlyCoding.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Apr 2021 14:47:18 +0800</lastBuildDate><atom:link href="https://ByteFlyCoding.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gin_Notes</title>
+      <link>https://ByteFlyCoding.github.io/2021/gin_notes/</link>
+      <pubDate>Wed, 14 Apr 2021 14:47:18 +0800</pubDate>
+      
+      <guid>https://ByteFlyCoding.github.io/2021/gin_notes/</guid>
+      <description>About Web Web是基于HTTP/HTTPS协议进行交互的应用网络。 Web就是通过使用浏览器/App访问的各种资源。 C/S架构： request(请求</description>
+    </item>
+    
     <item>
       <title>LeetCode</title>
       <link>https://ByteFlyCoding.github.io/2021/leetcode/</link>
       <pubDate>Sun, 11 Apr 2021 09:27:18 +0800</pubDate>
       
       <guid>https://ByteFlyCoding.github.io/2021/leetcode/</guid>
-      <description>26. 删除有序数组中的重复项 法一： func removeDuplicates(nums []int) int { for i := len(nums) - 1; i &amp;gt; 0; i-- { if nums[i] == nums[i-1] { nums = append(nums[:i-1], nums[i:]...) } } return len(nums) } 复杂度分析： 时间复杂度：O(n) 空间复杂度：O(1</description>
+      <description>1. 两数之和 法一： func twoSum(nums []int, target int) []int { var tmpMap = map[int]int{} for i, v := range nums { tmpMap[v] = i } for i, v := range nums { if pos, ok := tmpMap[target - v]; ok &amp;amp;&amp;amp; pos != i{ nums[0] = i nums[1] = pos break; } } return nums[0:2] } 复杂度分析： 时间复</description>
     </item>
     
     <item>

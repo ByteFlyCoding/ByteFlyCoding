@@ -13,7 +13,7 @@
       <pubDate>Sun, 11 Apr 2021 09:27:18 +0800</pubDate>
       
       <guid>https://ByteFlyCoding.github.io/2021/leetcode/</guid>
-      <description>26. 删除有序数组中的重复项 法一： func removeDuplicates(nums []int) int { for i := len(nums) - 1; i &amp;gt; 0; i-- { if nums[i] == nums[i-1] { nums = append(nums[:i-1], nums[i:]...) } } return len(nums) } 复杂度分析： 时间复杂度：O(n) 空间复杂度：O(1</description>
+      <description>1. 两数之和 法一： func twoSum(nums []int, target int) []int { var tmpMap = map[int]int{} for i, v := range nums { tmpMap[v] = i } for i, v := range nums { if pos, ok := tmpMap[target - v]; ok &amp;amp;&amp;amp; pos != i{ nums[0] = i nums[1] = pos break; } } return nums[0:2] } 复杂度分析： 时间复</description>
     </item>
     
   </channel>

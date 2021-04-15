@@ -6,7 +6,16 @@
     <description>Recent content in Categories on ZhangJincheng&#39;s Blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 11 Apr 2021 09:27:18 +0800</lastBuildDate><atom:link href="https://ByteFlyCoding.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Apr 2021 14:47:18 +0800</lastBuildDate><atom:link href="https://ByteFlyCoding.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Web Develop</title>
+      <link>https://ByteFlyCoding.github.io/categories/go-web-develop/</link>
+      <pubDate>Wed, 14 Apr 2021 14:47:18 +0800</pubDate>
+      
+      <guid>https://ByteFlyCoding.github.io/categories/go-web-develop/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Algorithem</title>
       <link>https://ByteFlyCoding.github.io/categories/algorithem/</link>
@@ -17,11 +26,11 @@
     </item>
     
     <item>
-      <title>SQL</title>
-      <link>https://ByteFlyCoding.github.io/categories/sql/</link>
+      <title>DataBaseSystem</title>
+      <link>https://ByteFlyCoding.github.io/categories/databasesystem/</link>
       <pubDate>Fri, 09 Apr 2021 20:13:52 +0800</pubDate>
       
-      <guid>https://ByteFlyCoding.github.io/categories/sql/</guid>
+      <guid>https://ByteFlyCoding.github.io/categories/databasesystem/</guid>
       <description></description>
     </item>
     

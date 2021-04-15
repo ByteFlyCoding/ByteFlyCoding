@@ -10,7 +10,7 @@
   <meta name="keywords" content="Golang, Go, Linux, Kubernets, Docker, DataStruct, Algorithm, DataBase, redis, mysql, ElasticSearch">
   
   <link rel="prev" href="https://ByteFlyCoding.github.io/2021/sql_notes/" />
-  
+  <link rel="next" href="https://ByteFlyCoding.github.io/2021/gin_notes/" />
   <link rel="canonical" href="https://ByteFlyCoding.github.io/2021/leetcode/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -44,7 +44,7 @@
     "articleSection" : "posts",
     "name" : "LeetCode",
     "headline" : "LeetCode",
-    "description" : "26. 删除有序数组中的重复项 法一： func removeDuplicates(nums []int) int { for i := len(nums) - 1; i \u0026gt; 0; i-- { if nums[i] == nums[i-1] { nums = append(nums[:i-1], nums[i:]...) } } return len(nums) } 复杂度分析： 时间复杂度：O(n) 空间复杂度：O(1",
+    "description" : "1. 两数之和 法一： func twoSum(nums []int, target int) []int { var tmpMap = map[int]int{} for i, v := range nums { tmpMap[v] = i } for i, v := range nums { if pos, ok := tmpMap[target - v]; ok \u0026amp;\u0026amp; pos != i{ nums[0] = i nums[1] = pos break; } } return nums[0:2] } 复杂度分析： 时间复",
     "inLanguage" : "zh-cn",
     "author" : "ZhangJincheng",
     "creator" : "ZhangJincheng",
@@ -55,7 +55,7 @@
     "datePublished": "2021-04-11 09:27:18 \u002b0800 CST",
     "dateModified" : "2021-04-11 09:27:18 \u002b0800 CST",
     "url" : "https:\/\/ByteFlyCoding.github.io\/2021\/leetcode\/",
-    "wordCount" : "131",
+    "wordCount" : "476",
     "keywords" : [ "LeetCode","Algorithem","Data Struct","Array","Double Points", "ZhangJincheng\u0027s Blogs"]
 }
 </script>
@@ -152,7 +152,7 @@
                         <a href="https://ByteFlyCoding.github.io/categories/algorithem/"> Algorithem </a>
                         
                 </span>
-                <span class="post-word-count">, 131 words</span>
+                <span class="post-word-count">, 476 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -171,7 +171,61 @@
           
           
 
-          <h1 id="26-删除有序数组中的重复项httpsleetcode-cncomproblemsremove-duplicates-from-sorted-arraydescription"><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/description/">26. 删除有序数组中的重复项</a></h1>
+          <h1 id="1-两数之和httpsleetcode-cncomproblemstwo-sum"><a href="https://leetcode-cn.com/problems/two-sum/">1. 两数之和</a></h1>
+<ul>
+<li>
+<p>法一：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">nums</span> []<span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">target</span> <span style="color:#66d9ef">int</span>) []<span style="color:#66d9ef">int</span> {
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tmpMap</span> = <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">int</span>]<span style="color:#66d9ef">int</span>{}
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">nums</span> {
+      <span style="color:#a6e22e">tmpMap</span>[<span style="color:#a6e22e">v</span>] = <span style="color:#a6e22e">i</span>
+	}
+  
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">nums</span> {
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">pos</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">tmpMap</span>[<span style="color:#a6e22e">target</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">v</span>]; <span style="color:#a6e22e">ok</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">pos</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">i</span>{
+          <span style="color:#a6e22e">nums</span>[<span style="color:#ae81ff">0</span>] = <span style="color:#a6e22e">i</span>
+          <span style="color:#a6e22e">nums</span>[<span style="color:#ae81ff">1</span>] = <span style="color:#a6e22e">pos</span>
+          <span style="color:#66d9ef">break</span>;
+      }
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">nums</span>[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">2</span>]
+}
+</code></pre></div><p>复杂度分析：</p>
+<ol>
+<li>
+<p>时间复杂度：O(n)</p>
+</li>
+<li>
+<p>空间复杂度：O(n)</p>
+</li>
+</ol>
+</li>
+<li>
+<p>法二：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">twoSum</span>(<span style="color:#a6e22e">nums</span> []<span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">target</span> <span style="color:#66d9ef">int</span>) []<span style="color:#66d9ef">int</span> {
+	<span style="color:#a6e22e">tmpMap</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">int</span>]<span style="color:#66d9ef">int</span>{}
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">nums</span> {
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">pos</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">tmpMap</span>[<span style="color:#a6e22e">target</span><span style="color:#f92672">-</span><span style="color:#a6e22e">v</span>]; <span style="color:#a6e22e">ok</span> {
+          <span style="color:#a6e22e">nums</span>[<span style="color:#ae81ff">0</span>] = <span style="color:#a6e22e">pos</span>
+          <span style="color:#a6e22e">nums</span>[<span style="color:#ae81ff">1</span>] = <span style="color:#a6e22e">i</span>
+          <span style="color:#66d9ef">break</span>
+      }
+      <span style="color:#a6e22e">tmpMap</span>[<span style="color:#a6e22e">v</span>] = <span style="color:#a6e22e">i</span>
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">nums</span>[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">2</span>]
+}
+</code></pre></div><p>复杂度分析：</p>
+<ol>
+<li>
+<p>时间复杂度：O(n)</p>
+</li>
+<li>
+<p>空间复杂度：O(n)</p>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="26-删除有序数组中的重复项httpsleetcode-cncomproblemsremove-duplicates-from-sorted-arraydescription"><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/description/">26. 删除有序数组中的重复项</a></h1>
 <ul>
 <li>
 <p>法一：</p>
@@ -205,7 +259,9 @@
 	}
 	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>
 }
-</code></pre></div><p>复杂度分析：</p>
+</code></pre></div></li>
+</ul>
+<p>复杂度分析：</p>
 <ol>
 <li>
 <p>时间复杂度：O(n)</p>
@@ -214,8 +270,60 @@
 <p>空间复杂度：O(1)</p>
 </li>
 </ol>
-</li>
+<h1 id="136-只出现一次的数字httpsleetcode-cncomproblemssingle-number"><a href="https://leetcode-cn.com/problems/single-number/">136. 只出现一次的数字</a></h1>
+<ul>
+<li>
+<p>法一：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">singleNumber</span>(<span style="color:#a6e22e">nums</span> []<span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
+	<span style="color:#a6e22e">tmpMap</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">int</span>]<span style="color:#66d9ef">int</span>)
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">value</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">nums</span> {
+      <span style="color:#a6e22e">tmpMap</span>[<span style="color:#a6e22e">value</span>] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+	}
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">tmpMap</span> {
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">tmpMap</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> {
+          <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">i</span>
+      }
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+}
+</code></pre></div></li>
 </ul>
+<p>复杂度分析：</p>
+<ol>
+<li>
+<p>时间复杂度：O(n)</p>
+</li>
+<li>
+<p>空间复杂度：O(n)</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>法二：</p>
+<p>用位运算 利用异或运算性质：</p>
+<ol>
+<li>任何数和 0 做异或运算，结果仍然是原来的数</li>
+<li>任何数和其自身做异或运算，结果是 0</li>
+<li>异或运算满足交换律和结合律</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">singleNumber</span>(<span style="color:#a6e22e">nums</span> []<span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
+    <span style="color:#a6e22e">single</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">num</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">nums</span> {
+        <span style="color:#a6e22e">single</span> ^= <span style="color:#a6e22e">num</span>
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">single</span>
+}
+</code></pre></div></li>
+</ul>
+<p>复杂度分析：</p>
+<ol>
+<li>
+<p>时间复杂度：O(n)</p>
+</li>
+<li>
+<p>空间复杂度：O(1)</p>
+</li>
+</ol>
 
     </div>
 
@@ -273,6 +381,8 @@
         
         <a href="https://ByteFlyCoding.github.io/2021/sql_notes/" class="prev" rel="prev" title="SQL"><i class="iconfont icon-left"></i>&nbsp;SQL</a>
          
+        
+        <a href="https://ByteFlyCoding.github.io/2021/gin_notes/" class="next" rel="next" title="Gin_Notes">Gin_Notes&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 

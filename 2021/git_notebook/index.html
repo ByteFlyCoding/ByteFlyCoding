@@ -55,7 +55,7 @@
     "datePublished": "2021-04-01 16:44:38 \u002b0800 CST",
     "dateModified" : "2021-04-01 16:44:38 \u002b0800 CST",
     "url" : "https:\/\/ByteFlyCoding.github.io\/2021\/git_notebook\/",
-    "wordCount" : "1418",
+    "wordCount" : "2902",
     "keywords" : [  "ZhangJincheng\u0027s Blogs"]
 }
 </script>
@@ -152,7 +152,7 @@
                         <a href="https://ByteFlyCoding.github.io/categories/tools/"> Tools </a>
                         
                 </span>
-                <span class="post-word-count">, 1418 words</span>
+                <span class="post-word-count">, 2902 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -222,6 +222,20 @@ git add -u <span style="color:#75715e"># 仅监控已经被add的文件（即tra
 git add --ignore-removal	<span style="color:#75715e"># 监控工作区的状态树，使用它会把工作时的所有变化提交到暂存区，包括文件内容修改(modified)以及新文件(new)，但不包括被删除的文件。</span>
 git add .	<span style="color:#75715e"># 监控工作区的状态树，使用它会把工作时的所有变化提交到暂存区，包括文件内容修改(modified)以及新文件(new)，包括被删除的文件。</span>
 git commit -m <span style="color:#e6db74">&#39;&lt;Comment&gt;&#39;</span>	<span style="color:#75715e"># 把文件提交到Repository</span>
+</code></pre></div></li>
+</ul>
+<h2 id="git-打标签">git 打标签</h2>
+<ul>
+<li>附注标签</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git tag
+git tag -a v&lt;版本号+others&gt; -m <span style="color:#e6db74">&#34;version &lt;版本号&gt;&#34;</span>
+git show v&lt;版本号+others&gt;
+</code></pre></div><ul>
+<li>轻量标签</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git tag v&lt;版本号+others&gt; 
+git show v&lt;版本号+others&gt;
 </code></pre></div><h2 id="给文件重命名的方法">给文件重命名的方法</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 法一：</span>
 mv &lt;file1&gt; &lt;file2&gt;
@@ -264,8 +278,6 @@ cd .git/refs/ <span style="color:#f92672">&amp;&amp;</span> cd tags/	<span style
 git cat-file -t + &lt;hash值&gt;	<span style="color:#75715e"># 可以查看hash对应的类型</span>
 git cat-file -p + &lt;hash值&gt;	<span style="color:#75715e"># 可以查看hash对应的内容</span>
 </code></pre></div></li>
-</ul>
-</li>
 <li>
 <p>objects: 在初始化的时候，objects里有两个空的文件夹：info和pack。Git 往磁盘保存对象时默认使用的格式叫松散对象 (loose object) 格式，当你对同一个文件修改哪怕一行，git 都会使用全新的文件存储这个修改了的文件，放在了objects中。Git 时不时地将这些对象打包至一个叫 packfile 的二进制文件以节省空间并提高效率，当版本库中有太多的松散对象，或者你手动执行 <code>git gc</code> 命令，或者你向远程服务器执行推送时，Git 都会这样做。</p>
 </li>
@@ -295,8 +307,80 @@ git cat-file -p + &lt;hash值&gt;	<span style="color:#75715e"># 可以查看hash
 git diff HEAD HEAD^	<span style="color:#75715e"># 一个^表示一阶祖先</span>
 </code></pre></div><h2 id="怎么删除不需要的git分支">怎么删除不需要的git分支</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch -d &lt;branchName&gt;
-git branch -D
-</code></pre></div><h2 id="github-配置公私钥">github 配置公私钥</h2>
+git branch -D &lt;branchName&gt;
+</code></pre></div><h2 id="修改commit的message">修改commit的message</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit ammend
+</code></pre></div><h2 id="修改老旧的commit的message">修改老旧的commit的message</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rebase -i &lt;被变更的commit的父commit的hash&gt;
+</code></pre></div><p>把pick改为<code>reward</code></p>
+<h2 id="怎么把连续的多个commit整理成一个">怎么把连续的多个commit整理成一个</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rebase -i &lt;连续的多个被变更的commit的父commit的hash&gt;
+</code></pre></div><p>把需要合并的commit的 <code>pick</code> 改为 <code>squash</code></p>
+<h2 id="怎么把间隔的几个commit整理成一个">怎么把间隔的几个commit整理成一个</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rebase -i &lt;需要合并的最早的那个commit的hash&gt;
+</code></pre></div><p>把最早的那个commit 的hash 添加到顶部行(pick &lt;要合并的最早的那个commit的hash&gt;) ，把需要合并的commit的行移动到一块 并把<code>pick</code>改为<code>squash</code></p>
+<h2 id="怎么比较暂存区和head所含文件的差异">怎么比较暂存区和HEAD所含文件的差异</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git diff --cached
+git diff -- &lt;fileName1&gt; &lt;fileName2&gt;	<span style="color:#75715e"># 查看工作区上&lt;fileName1&gt; &lt;fileName2&gt; 与暂存区的&lt;fileName1&gt; &lt;fileName2&gt;的区别</span>
+</code></pre></div><h2 id="如何让暂存区恢复成与head的一样取消暂存">如何让暂存区恢复成与HEAD的一样(取消暂存)</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git reset HEAD
+</code></pre></div><h2 id="如何让工作区的文件恢复和暂存区的一样">如何让工作区的文件恢复和暂存区的一样</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout -- &lt;fileName&gt; &lt;fileName1&gt;
+</code></pre></div><h2 id="怎么取消暂存区部分文件的变更">怎么取消暂存区部分文件的变更</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git reset HEAD -- &lt;fileName&gt; &lt;fileName1&gt;
+</code></pre></div><h2 id="消除最近几次commit">消除最近几次commit</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git reset --hart &lt;需要回跳到的commit的hash值&gt;
+</code></pre></div><h2 id="查看不同提交的指定文件的差异">查看不同提交的指定文件的差异</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git diff &lt;branchNameOne&gt; &lt;branchNameTwo&gt;	<span style="color:#75715e"># 查看两个分支的所有差异</span>
+git diff &lt;branchNameOne&gt; &lt;branchNameTwo&gt; -- &lt;fileName&gt;	<span style="color:#75715e"># 查看两个分支指定文件&lt;fileName&gt;的差异</span>
+git diff &lt;branch_hash_One&gt; &lt;branch_hash_Two&gt; -- &lt;fileName&gt;	<span style="color:#75715e"># 查看两个分支指定文件&lt;fileName&gt;的差异</span>
+</code></pre></div><h2 id="正确删除文件的方法">正确删除文件的方法</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 法一：</span>
+rm &lt;fileName&gt; <span style="color:#f92672">&amp;&amp;</span> git rm &lt;fileName&gt;
+<span style="color:#75715e"># 法二：</span>
+git rm &lt;fileNameOne&gt; &lt;fileNameTwo&gt;
+</code></pre></div><h2 id="开发中临时加塞了紧急任务怎么处理">开发中临时加塞了紧急任务怎么处理</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git diff	<span style="color:#75715e"># 查看工作区有什么不同</span>
+git stash	<span style="color:#75715e"># Saved working directory</span>
+git stash list	<span style="color:#75715e"># 查看stash列表</span>
+git stash pop	<span style="color:#75715e"># 起到两个作用： 1. 将stash保存的内容保存回工作目录 2，删除改stash保存的信息 </span>
+git stash apply	<span style="color:#75715e"># 起到两个作用： 1. 将stash保存的内容保存回工作目录 2. 该stash保存的信息还在</span>
+</code></pre></div><h2 id="指定不需要git管理的文件编辑gitignore文件">指定不需要Git管理的文件(编辑<code>.gitignore文件</code>)</h2>
+<p><code>*</code>: 通配符
+<code>/</code>: 该文件夹下的所有文件都不要纳入git版本控制系统中  注意：带<code>/</code>与不带<code>/</code>是不一样的，不带<code>/</code>说明符合该匹配的文件或符合该匹配的文件夹都被忽略，带<code>/</code>说明只有符合该匹配的文件夹被忽略</p>
+<h2 id="将git仓库备份到本地">将Git仓库备份到本地</h2>
+<ol>
+<li>常用的传输协议
+<ul>
+<li>本地协议(1):<code>/path/to/repo.git</code> 说明：哑协议</li>
+<li>本地协议(2): <code>file:///path/to/repo.git</code> 说明：智能协议</li>
+<li>http/https协议: <code>http://git-server.com:prot/path/to/repo.git</code>及<code>https://git-server.com:port/path/to/repo.git</code> 说明：平时接触到的都是智能协议</li>
+<li>ssh协议: <code>user@git-server.com:path/to/repo.git</code> 说明：工作中最常用的智能协议</li>
+</ul>
+</li>
+<li>哑协议与智能协议区别
+<ul>
+<li>直观区别：哑协议传输进度不可见，智能协议传输可见</li>
+<li>传输速度：智能协议比哑协议传输速度快</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone --bare &lt;RepoURL&gt;# --bare: clone一个不带工作区的仓库,这样以后做push操作的时候方便一点 
+git remote -v	<span style="color:#75715e"># 与远端仓库关联 会显示需要读写远程仓库使用的 Git 保存的简写与其对应的 URL</span>
+git remote add &lt;ShortName&gt; &lt;RepoURL&gt;
+git push --set-upstream &lt;ShortName&gt; &lt;BranchName&gt;
+</code></pre></div><h2 id="git-push-常见错误及解决办法">git push 常见错误及解决办法</h2>
+<p>使用 <code>git push -u origin main</code>出错(<code>error:failed to push some refs to 'https://github.com/*****/xxx.git'</code>)
+原因：
+github上创建远程仓库的时候选择添加README.md文件,
+github中的README.md文件不在本地代码目录中;</p>
+<p>Solutions:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 1.执行将代码合并</span>
+git pull --rebase origin main
+<span style="color:#75715e"># 2.执行</span>
+git push -u origin main
+</code></pre></div><p><a href="https://blog.csdn.net/qq_29393273/article/details/90691905">参考</a></p>
+<h2 id="github-配置公私钥">github 配置公私钥</h2>
 <p>why: 配置了公私钥后对远程分支进行操作不需要输入密码</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Step 1:检查本地是否有公钥</span>
 ssh-keygen -t rsa -C <span style="color:#e6db74">&#34;&lt;MyEmail&gt;&#34;</span>

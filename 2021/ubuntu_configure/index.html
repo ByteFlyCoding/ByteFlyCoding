@@ -55,7 +55,7 @@
     "datePublished": "2021-03-31 19:45:02 \u002b0800 CST",
     "dateModified" : "2021-03-31 19:45:02 \u002b0800 CST",
     "url" : "https:\/\/ByteFlyCoding.github.io\/2021\/ubuntu_configure\/",
-    "wordCount" : "605",
+    "wordCount" : "696",
     "keywords" : [ "Linux", "ZhangJincheng\u0027s Blogs"]
 }
 </script>
@@ -152,7 +152,7 @@
                         <a href="https://ByteFlyCoding.github.io/categories/linux/"> Linux </a>
                         
                 </span>
-                <span class="post-word-count">, 605 words</span>
+                <span class="post-word-count">, 696 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -230,9 +230,10 @@ sudo apt install fcitx
 <p>感觉自己的下载的文件有问题，找个时间重新下一遍并且写一下文档</p>
 <p><a href="http://www.ahutcloud.cn/212/#toc-head-13">Ubuntu 20.04 安装记录以及配置与美化参考链接</a></p>
 <p><a href="https://blog.csdn.net/yyinhai/article/details/52944897">Ubuntu 清理系统日志</a></p>
+<p><a href="https://my.oschina.net/zhangqingcai/blog/23994">清理Ubuntu系统的缓存、垃圾、多余内核</a></p>
 <h2 id="ubuntu-彻底卸载软件">ubuntu 彻底卸载软件</h2>
-<p>sudo apt autoremove &ndash;purge + SoftwareName</p>
-<h2 id="ubuntu-安装-git">ubuntu 安装 git</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt autoremove --purge + SoftwareName
+</code></pre></div><h2 id="ubuntu-安装-git">ubuntu 安装 git</h2>
 <p><a href="https://git-scm.com/download/linux">安装 git 参考</a></p>
 <h2 id="ubuntu-安装-typora">ubuntu 安装 typora</h2>
 <p><a href="https://www.typora.io/#linux">安装 typora 查看</a></p>
@@ -262,7 +263,11 @@ cat + &lt;Wi-Fi_Name&gt;
 </ul>
 <h2 id="根分区扩容">根分区扩容</h2>
 <p><a href="https://zhuanlan.zhihu.com/p/146554549">参考链接</a></p>
-
+<h2 id="linux清除日志文件">Linux清除日志文件</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">journalctl --disk-usage	<span style="color:#75715e"># 检查日志的大小</span>
+sudo journalctl --vacuum-time<span style="color:#f92672">=</span>&lt;n&gt;d	<span style="color:#75715e"># 清除早于&lt;n&gt;天的日志</span>
+sudo find /var/log/ -type f -mtime +&lt;n&gt; -exec rm -f <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span>	<span style="color:#75715e"># 删除&lt;n天前的旧&gt;</span>
+</code></pre></div>
     </div>
 
     <div class="post-copyright">

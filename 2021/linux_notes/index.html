@@ -55,7 +55,7 @@
     "datePublished": "2021-03-31 20:21:29 \u002b0800 CST",
     "dateModified" : "2021-03-31 20:21:29 \u002b0800 CST",
     "url" : "https:\/\/ByteFlyCoding.github.io\/2021\/linux_notes\/",
-    "wordCount" : "15059",
+    "wordCount" : "15076",
     "keywords" : [ "Linux", "ZhangJincheng\u0027s Blogs"]
 }
 </script>
@@ -152,7 +152,7 @@
                         <a href="https://ByteFlyCoding.github.io/categories/linux/"> Linux </a>
                         
                 </span>
-                <span class="post-word-count">, 15059 words</span>
+                <span class="post-word-count">, 15076 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -1538,11 +1538,11 @@ export PATH=$PATH:DERBY_HOME</p>
 <li>firewallD服务</li>
 </ul>
 <h3 id="ssh">ssh</h3>
-<p>ssh-keygen -t rsa
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa
 ssh-copy-id  username@&lt;ip_Adress&gt;    // 将公钥拷贝进目标主机的authorized_keys
-scp <!-- raw HTML omitted --> username@&lt;ip_Adress&gt;:&lt;/username/filename&gt;    // 将本机<!-- raw HTML omitted -->拷贝到username@&lt;ip_Adress&gt;:&lt;/username/filename&gt;
-scp username@&lt;ip_Adress&gt;:&lt;dir/filename&gt; &lt;/username/filename&gt;    // 将username@&lt;ip_Adress&gt;:&lt;dir/filename&gt;拷贝到本机&lt;/username/filename&gt;</p>
-
+scp &lt;filename&gt; username@&lt;ip_Adress&gt;:&lt;/username/filename&gt;    // 将本机&lt;filename&gt;拷贝到username@&lt;ip_Adress&gt;:&lt;/username/filename&gt;
+scp username@&lt;ip_Adress&gt;:&lt;dir/filename&gt; &lt;/username/filename&gt;    // 将username@&lt;ip_Adress&gt;:&lt;dir/filename&gt;拷贝到本机&lt;/username/filename&gt;
+</code></pre></div>
     </div>
 
     <div class="post-copyright">
