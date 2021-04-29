@@ -55,7 +55,7 @@
     "datePublished": "2021-04-11 09:27:18 \u002b0800 CST",
     "dateModified" : "2021-04-11 09:27:18 \u002b0800 CST",
     "url" : "https:\/\/ByteFlyCoding.github.io\/2021\/leetcode\/",
-    "wordCount" : "476",
+    "wordCount" : "564",
     "keywords" : [ "LeetCode","Algorithem","Data Struct","Array","Double Points", "ZhangJincheng\u0027s Blogs"]
 }
 </script>
@@ -152,7 +152,7 @@
                         <a href="https://ByteFlyCoding.github.io/categories/algorithem/"> Algorithem </a>
                         
                 </span>
-                <span class="post-word-count">, 476 words</span>
+                <span class="post-word-count">, 564 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -180,7 +180,7 @@
 	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">nums</span> {
       <span style="color:#a6e22e">tmpMap</span>[<span style="color:#a6e22e">v</span>] = <span style="color:#a6e22e">i</span>
 	}
-  
+
 	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">nums</span> {
       <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">pos</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">tmpMap</span>[<span style="color:#a6e22e">target</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">v</span>]; <span style="color:#a6e22e">ok</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">pos</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">i</span>{
           <span style="color:#a6e22e">nums</span>[<span style="color:#ae81ff">0</span>] = <span style="color:#a6e22e">i</span>
@@ -286,9 +286,9 @@
 	}
 	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 }
-</code></pre></div></li>
+</code></pre></div><p>复杂度分析：</p>
+</li>
 </ul>
-<p>复杂度分析：</p>
 <ol>
 <li>
 <p>时间复杂度：O(n)</p>
@@ -319,6 +319,31 @@
 <ol>
 <li>
 <p>时间复杂度：O(n)</p>
+</li>
+<li>
+<p>空间复杂度：O(1)</p>
+</li>
+</ol>
+<h1 id="220-存在重复元素-iiihttpsleetcode-cncomproblemscontains-duplicate-iii"><a href="https://leetcode-cn.com/problems/contains-duplicate-iii/">220. 存在重复元素 III</a></h1>
+<ul>
+<li>法一：</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">containsNearbyAlmostDuplicate</span>(<span style="color:#a6e22e">nums</span> []<span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">k</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">t</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">bool</span> {
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">label</span> <span style="color:#66d9ef">bool</span>
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">nums</span> {
+		<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">j</span> &lt; len(<span style="color:#a6e22e">nums</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">math</span>.<span style="color:#a6e22e">Abs</span>(float64(<span style="color:#a6e22e">j</span><span style="color:#f92672">-</span><span style="color:#a6e22e">i</span>)) <span style="color:#f92672">&lt;=</span> float64(<span style="color:#a6e22e">k</span>); <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span> {
+			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">math</span>.<span style="color:#a6e22e">Abs</span>(float64(<span style="color:#a6e22e">nums</span>[<span style="color:#a6e22e">i</span>]<span style="color:#f92672">-</span><span style="color:#a6e22e">nums</span>[<span style="color:#a6e22e">j</span>])) <span style="color:#f92672">&lt;=</span> float64(<span style="color:#a6e22e">t</span>) {
+				<span style="color:#a6e22e">label</span> = <span style="color:#66d9ef">true</span>
+				<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">label</span>
+			}
+		}
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">label</span>
+}
+</code></pre></div><p>复杂度分析：</p>
+<ol>
+<li>
+<p>时间复杂度：O(kn)</p>
 </li>
 <li>
 <p>空间复杂度：O(1)</p>

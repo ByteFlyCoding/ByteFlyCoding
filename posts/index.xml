@@ -6,14 +6,23 @@
     <description>Recent content in Posts on ZhangJincheng&#39;s Blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 14 Apr 2021 14:47:18 +0800</lastBuildDate><atom:link href="https://ByteFlyCoding.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Apr 2021 12:42:06 +0800</lastBuildDate><atom:link href="https://ByteFlyCoding.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linus_Operating_System_Theory</title>
+      <link>https://ByteFlyCoding.github.io/2021/linus_operating_system_theory/</link>
+      <pubDate>Sun, 18 Apr 2021 12:42:06 +0800</pubDate>
+      
+      <guid>https://ByteFlyCoding.github.io/2021/linus_operating_system_theory/</guid>
+      <description>Linux Operating System Theory Linux Operating System Calls  fork execve waitpid brk mmap msgget msgsnd msgrcv shmget shmat sem_wait sem_post sys_open  </description>
+    </item>
+    
     <item>
       <title>Gin_Notes</title>
       <link>https://ByteFlyCoding.github.io/2021/gin_notes/</link>
       <pubDate>Wed, 14 Apr 2021 14:47:18 +0800</pubDate>
       
       <guid>https://ByteFlyCoding.github.io/2021/gin_notes/</guid>
-      <description>About Web Web是基于HTTP/HTTPS协议进行交互的应用网络。 Web就是通过使用浏览器/App访问的各种资源。 C/S架构： request(请求</description>
+      <description>About Web Web 是基于 HTTP/HTTPS 协议进行交互的应用网络。 Web 就是通过使用浏览器/App 访问的各种资源。 C/S 架构： request(请求) response(响应) HTTP 轮</description>
     </item>
     
     <item>
@@ -49,7 +58,7 @@
       <pubDate>Wed, 31 Mar 2021 20:21:29 +0800</pubDate>
       
       <guid>https://ByteFlyCoding.github.io/2021/linux_notes/</guid>
-      <description>帮助命令 man 帮助（manual缩写） 举例： man ls 获取ls命令的帮助 man man 获取man命令的帮助，有很多重名的 man 7 man 获取man命令第7章的命令 man -a passwd 不</description>
+      <description>帮助命令 man 帮助（manual 缩写） 举例： man ls 获取 ls 命令的帮助 man man 获取 man 命令的帮助，有很多重名的 man 7 man 获取 man 命令第 7 章的命令 man -a passwd 不清楚是 passwd 是</description>
     </item>
     
     <item>
@@ -58,7 +67,7 @@
       <pubDate>Wed, 31 Mar 2021 20:13:52 +0800</pubDate>
       
       <guid>https://ByteFlyCoding.github.io/2021/golang_notes/</guid>
-      <description>go语言清除go mod 缓存 go clean --modcache</description>
+      <description>go 语言清除 go mod 缓存 go clean --modcache</description>
     </item>
     
     <item>

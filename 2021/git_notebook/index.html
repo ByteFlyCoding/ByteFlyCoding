@@ -55,7 +55,7 @@
     "datePublished": "2021-04-01 16:44:38 \u002b0800 CST",
     "dateModified" : "2021-04-01 16:44:38 \u002b0800 CST",
     "url" : "https:\/\/ByteFlyCoding.github.io\/2021\/git_notebook\/",
-    "wordCount" : "2902",
+    "wordCount" : "3552",
     "keywords" : [  "ZhangJincheng\u0027s Blogs"]
 }
 </script>
@@ -152,7 +152,7 @@
                         <a href="https://ByteFlyCoding.github.io/categories/tools/"> Tools </a>
                         
                 </span>
-                <span class="post-word-count">, 2902 words</span>
+                <span class="post-word-count">, 3552 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -234,7 +234,7 @@ git show v&lt;版本号+others&gt;
 </code></pre></div><ul>
 <li>轻量标签</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git tag v&lt;版本号+others&gt; 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git tag v&lt;版本号+others&gt;
 git show v&lt;版本号+others&gt;
 </code></pre></div><h2 id="给文件重命名的方法">给文件重命名的方法</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 法一：</span>
@@ -274,7 +274,7 @@ git log --oneline --all -n&lt;num&gt; --graph
 <p>refs: refs文件夹存储着分支和标签的引用</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd .git/refs/ <span style="color:#f92672">&amp;&amp;</span> cd heads/	<span style="color:#75715e"># .git/refs/HEAD 存储着各个分支的引用</span>
 cd .git/refs/ <span style="color:#f92672">&amp;&amp;</span> cd tags/	<span style="color:#75715e"># .git/refs/tags 储存着各个标签的引用 tag指向一个commit</span>
-    
+
 git cat-file -t + &lt;hash值&gt;	<span style="color:#75715e"># 可以查看hash对应的类型</span>
 git cat-file -p + &lt;hash值&gt;	<span style="color:#75715e"># 可以查看hash对应的内容</span>
 </code></pre></div></li>
@@ -309,10 +309,10 @@ git diff HEAD HEAD^	<span style="color:#75715e"># 一个^表示一阶祖先</spa
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch -d &lt;branchName&gt;
 git branch -D &lt;branchName&gt;
 </code></pre></div><h2 id="修改commit的message">修改commit的message</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit ammend
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit --ammend
 </code></pre></div><h2 id="修改老旧的commit的message">修改老旧的commit的message</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rebase -i &lt;被变更的commit的父commit的hash&gt;
-</code></pre></div><p>把pick改为<code>reward</code></p>
+</code></pre></div><p>把pick改为<code>reword</code></p>
 <h2 id="怎么把连续的多个commit整理成一个">怎么把连续的多个commit整理成一个</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rebase -i &lt;连续的多个被变更的commit的父commit的hash&gt;
 </code></pre></div><p>把需要合并的commit的 <code>pick</code> 改为 <code>squash</code></p>
@@ -343,7 +343,7 @@ git rm &lt;fileNameOne&gt; &lt;fileNameTwo&gt;
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git diff	<span style="color:#75715e"># 查看工作区有什么不同</span>
 git stash	<span style="color:#75715e"># Saved working directory</span>
 git stash list	<span style="color:#75715e"># 查看stash列表</span>
-git stash pop	<span style="color:#75715e"># 起到两个作用： 1. 将stash保存的内容保存回工作目录 2，删除改stash保存的信息 </span>
+git stash pop	<span style="color:#75715e"># 起到两个作用： 1. 将stash保存的内容保存回工作目录 2，删除改stash保存的信息</span>
 git stash apply	<span style="color:#75715e"># 起到两个作用： 1. 将stash保存的内容保存回工作目录 2. 该stash保存的信息还在</span>
 </code></pre></div><h2 id="指定不需要git管理的文件编辑gitignore文件">指定不需要Git管理的文件(编辑<code>.gitignore文件</code>)</h2>
 <p><code>*</code>: 通配符
@@ -365,26 +365,78 @@ git stash apply	<span style="color:#75715e"># 起到两个作用： 1. 将stash�
 </ul>
 </li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone --bare &lt;RepoURL&gt;# --bare: clone一个不带工作区的仓库,这样以后做push操作的时候方便一点 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone --bare &lt;RepoURL&gt;	<span style="color:#75715e"># --bare: clone一个不带工作区的仓库,这样以后做push操作的时候方便一点</span>
+git clone &lt;RepoURL&gt; &lt;文件名&gt;	<span style="color:#75715e"># 把仓库clone到&lt;文件名下&gt;</span>
 git remote -v	<span style="color:#75715e"># 与远端仓库关联 会显示需要读写远程仓库使用的 Git 保存的简写与其对应的 URL</span>
 git remote add &lt;ShortName&gt; &lt;RepoURL&gt;
 git push --set-upstream &lt;ShortName&gt; &lt;BranchName&gt;
+git push &lt;ShortName&gt; --all	<span style="color:#75715e"># 所有分支都被push</span>
+<span style="color:#75715e"># 如果远程仓库的某些分支拒绝推送</span>
+<span style="color:#75715e"># 法一：</span>
+git pull &lt;ShortName&gt; &lt;BranchName&gt;	<span style="color:#75715e"># git pull 等于 git fetch + git merge</span>
+<span style="color:#75715e"># 法二：</span>
+git fetch &lt;ShortName&gt; &lt;BranchName&gt;
+<span style="color:#75715e"># 如果本地仓库分支不是基于远程仓库分支做的修改</span>
+git merge --allow-unrelated-histories &lt;ShortName/BranchName&gt;
 </code></pre></div><h2 id="git-push-常见错误及解决办法">git push 常见错误及解决办法</h2>
 <p>使用 <code>git push -u origin main</code>出错(<code>error:failed to push some refs to 'https://github.com/*****/xxx.git'</code>)
 原因：
 github上创建远程仓库的时候选择添加README.md文件,
 github中的README.md文件不在本地代码目录中;</p>
 <p>Solutions:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 1.执行将代码合并</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 法一：（会导致commit的hash值发生变化）</span>
+<span style="color:#75715e"># 1.执行将代码合并</span>
 git pull --rebase origin main
 <span style="color:#75715e"># 2.执行</span>
 git push -u origin main
+<span style="color:#75715e"># 法二：</span>
+git merge --allow-unrelated-histories &lt;ShortName/BranchName&gt;
 </code></pre></div><p><a href="https://blog.csdn.net/qq_29393273/article/details/90691905">参考</a></p>
+<h2 id="不同人修改了不同文件要怎么处理">不同人修改了不同文件要怎么处理</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --add --local user.&lt;name&gt;
+git checkout -b &lt;branchName&gt; &lt;remoteBranchName&gt;	<span style="color:#75715e"># 基于远程分支&lt;branchName&gt; 创建远程分支&lt;remoteBranchName&gt; 并切换到&lt;branchName&gt;上</span>
+git add -u
+git config --local -l
+git merge &lt;ShortName/BranchName&gt;	<span style="color:#75715e"># 不同人修改了不同文件</span>
+</code></pre></div><h2 id="同时变更了文件名和文件内容怎么处理">同时变更了文件名和文件内容怎么处理</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git pull	<span style="color:#75715e"># git会智能的感知到文件名的变化</span>
+</code></pre></div><h2 id="把同一文件改成了不同的文件名怎么处理">把同一文件改成了不同的文件名怎么处理</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push	<span style="color:#75715e"># 报错</span>
+git status
+git rm &lt;原文件名&gt;
+git status
+git add &lt;修改后的文件名&gt;
+git rm &lt;需要保留的文件名&gt;
+git commit -am <span style="color:#e6db74">&#34;&#34;</span>
+</code></pre></div><h2 id="禁止向集成分支执行变更历史的操作">禁止向集成分支执行变更历史的操作</h2>
+<h2 id="github高级搜索">github高级搜索</h2>
+<p><a href="https://docs.github.com/en/github/searching-for-information-on-github">Official Docs</a></p>
+<ul>
+<li><code>&lt;keyword&gt; in readme</code>: 在readme中搜索</li>
+<li><code>&lt;keyword&gt; star &gt; &lt;num&gt; </code>: 搜索star大于多少的项目</li>
+<li><code>&lt;keyword&gt; filename:&lt;filename&gt;</code>: 项目里需要包括该文件</li>
+</ul>
+<h2 id="github分支集成策略">Github分支集成策略</h2>
+<ul>
+<li>Allow merge commits: Add all commits from the head branch to the base branch with a merge commit.</li>
+<li>Allow squash merging: Combine all commits from the head branch into a single commit in the base branch.</li>
+<li>Allow rebase  merging: Add all commits from head branch onto the base branch individually.</li>
+</ul>
+<h2 id="github启用issue跟踪需求和任务">Github启用issue跟踪需求和任务</h2>
+<h2 id="github用project管理issue">Github用project管理issue</h2>
+<h2 id="github项目内部怎么实施-code-review">Github项目内部怎么实施 code review</h2>
+<h2 id="github怎么保证集成的质量cicd">Github怎么保证集成的质量（CI/CD）</h2>
+<ul>
+<li>Codecov</li>
+<li>TravisCI</li>
+</ul>
+<h2 id="github怎么把产品包发布到github上">Github怎么把产品包发布到Github上</h2>
+<h2 id="github怎么给项目增加详细的指导文档">Github怎么给项目增加详细的指导文档</h2>
 <h2 id="github-配置公私钥">github 配置公私钥</h2>
 <p>why: 配置了公私钥后对远程分支进行操作不需要输入密码</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Step 1:检查本地是否有公钥</span>
 ssh-keygen -t rsa -C <span style="color:#e6db74">&#34;&lt;MyEmail&gt;&#34;</span>
-<span style="color:#75715e"># Step 2: 将~/.ssh/id_rsa.pub 复制并粘贴进Github的ssh key中  </span>
+<span style="color:#75715e"># Step 2: 将~/.ssh/id_rsa.pub 复制并粘贴进Github的ssh key中</span>
 </code></pre></div><h2 id="把本地仓库同步到github上">把本地仓库同步到GitHub上</h2>
 
     </div>

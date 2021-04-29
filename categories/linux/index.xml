@@ -13,7 +13,7 @@
       <pubDate>Wed, 31 Mar 2021 20:21:29 +0800</pubDate>
       
       <guid>https://ByteFlyCoding.github.io/2021/linux_notes/</guid>
-      <description>帮助命令 man 帮助（manual缩写） 举例： man ls 获取ls命令的帮助 man man 获取man命令的帮助，有很多重名的 man 7 man 获取man命令第7章的命令 man -a passwd 不</description>
+      <description>帮助命令 man 帮助（manual 缩写） 举例： man ls 获取 ls 命令的帮助 man man 获取 man 命令的帮助，有很多重名的 man 7 man 获取 man 命令第 7 章的命令 man -a passwd 不清楚是 passwd 是</description>
     </item>
     
     <item>

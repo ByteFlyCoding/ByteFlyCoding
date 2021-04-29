@@ -13,7 +13,7 @@
       <pubDate>Wed, 31 Mar 2021 20:13:52 +0800</pubDate>
       
       <guid>https://ByteFlyCoding.github.io/2021/golang_notes/</guid>
-      <description>go语言清除go mod 缓存 go clean --modcache</description>
+      <description>go 语言清除 go mod 缓存 go clean --modcache</description>
     </item>
     
   </channel>

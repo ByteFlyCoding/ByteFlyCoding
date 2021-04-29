@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opertating System Theory on ZhangJincheng&#39;s Blogs</title>
+    <link>https://ByteFlyCoding.github.io/tags/opertating-system-theory/</link>
+    <description>Recent content in Opertating System Theory on ZhangJincheng&#39;s Blogs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 18 Apr 2021 12:42:06 +0800</lastBuildDate><atom:link href="https://ByteFlyCoding.github.io/tags/opertating-system-theory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linus_Operating_System_Theory</title>
+      <link>https://ByteFlyCoding.github.io/2021/linus_operating_system_theory/</link>
+      <pubDate>Sun, 18 Apr 2021 12:42:06 +0800</pubDate>
+      
+      <guid>https://ByteFlyCoding.github.io/2021/linus_operating_system_theory/</guid>
+      <description>Linux Operating System Theory Linux Operating System Calls  fork execve waitpid brk mmap msgget msgsnd msgrcv shmget shmat sem_wait sem_post sys_open  </description>
+    </item>
+    
+  </channel>
+</rss>

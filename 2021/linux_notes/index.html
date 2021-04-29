@@ -44,7 +44,7 @@
     "articleSection" : "posts",
     "name" : "Linux_Notes",
     "headline" : "Linux_Notes",
-    "description" : "帮助命令 man 帮助（manual缩写） 举例： man ls 获取ls命令的帮助 man man 获取man命令的帮助，有很多重名的 man 7 man 获取man命令第7章的命令 man -a passwd 不",
+    "description" : "帮助命令 man 帮助（manual 缩写） 举例： man ls 获取 ls 命令的帮助 man man 获取 man 命令的帮助，有很多重名的 man 7 man 获取 man 命令第 7 章的命令 man -a passwd 不清楚是 passwd 是",
     "inLanguage" : "zh-cn",
     "author" : "ZhangJincheng",
     "creator" : "ZhangJincheng",
@@ -55,7 +55,7 @@
     "datePublished": "2021-03-31 20:21:29 \u002b0800 CST",
     "dateModified" : "2021-03-31 20:21:29 \u002b0800 CST",
     "url" : "https:\/\/ByteFlyCoding.github.io\/2021\/linux_notes\/",
-    "wordCount" : "15076",
+    "wordCount" : "13549",
     "keywords" : [ "Linux", "ZhangJincheng\u0027s Blogs"]
 }
 </script>
@@ -152,7 +152,7 @@
                         <a href="https://ByteFlyCoding.github.io/categories/linux/"> Linux </a>
                         
                 </span>
-                <span class="post-word-count">, 15076 words</span>
+                <span class="post-word-count">, 13549 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -174,12 +174,12 @@
           <h3 id="帮助命令">帮助命令</h3>
 <ul>
 <li>
-<p>man 帮助（manual缩写）
-举例： man ls 获取ls命令的帮助
-man man 获取man命令的帮助，有很多重名的
-man 7 man 获取man命令第7章的命令
-man -a passwd 不清楚是passwd 是配置、文件还是命令等，可以用-a列出所有情况
-man -1 passwd 即获取passwd命令的帮助</p>
+<p>man 帮助（manual 缩写）
+举例： man ls 获取 ls 命令的帮助
+man man 获取 man 命令的帮助，有很多重名的
+man 7 man 获取 man 命令第 7 章的命令
+man -a passwd 不清楚是 passwd 是配置、文件还是命令等，可以用-a 列出所有情况
+man -1 passwd 即获取 passwd 命令的帮助</p>
 </li>
 <li>
 <p>help 帮助
@@ -187,8 +187,8 @@ shell 命令解释器自带的命令成为内部命令，其他的就是外部�
 </li>
 </ul>
 <p>如何区分内部、外部命令：
-举例： type cd -&gt; cd is a shell builtin cd是内部命令
-type ls -&gt; ls is hashed (/bin/ls) ls则是外部命令</p>
+举例： type cd -&gt; cd is a shell builtin cd 是内部命令
+type ls -&gt; ls is hashed (/bin/ls) ls 则是外部命令</p>
 <p>举例： help cd 内部命令使用 help **
 ls &ndash;help 外部命令使用 ** &ndash;help</p>
 <h3 id="开关机">开关机</h3>
@@ -207,7 +207,7 @@ shutdown -r 30
 shutdown -c
 </code></pre><ul>
 <li>info 命令
-info帮助比help更详细，作为help的补充。但info都是英文的。info也比man要详细</li>
+info 帮助比 help 更详细，作为 help 的补充。但 info 都是英文的。info 也比 man 要详细</li>
 </ul>
 <h3 id="切换图形界面">切换图形界面：</h3>
 <p>init 3
@@ -216,17 +216,17 @@ init 5</p>
 <p>exit</p>
 <h3 id="常见的目录介绍">常见的目录介绍：</h3>
 <ul>
-<li>/    根目录</li>
-<li>/root    root用户的家目录</li>
-<li>/home/username    普通用户的家目录</li>
-<li>/etc    配置文件目录</li>
-<li>/bin    命令目录</li>
-<li>/sbin    管理命令目录</li>
-<li>/usr/bin /usr/sbin    系统预装的其他命令</li>
-<li>/dev    设备文件</li>
-<li>/dev/pts&hellip;    虚拟终端</li>
+<li>/ 根目录</li>
+<li>/root root 用户的家目录</li>
+<li>/home/username 普通用户的家目录</li>
+<li>/etc 配置文件目录</li>
+<li>/bin 命令目录</li>
+<li>/sbin 管理命令目录</li>
+<li>/usr/bin /usr/sbin 系统预装的其他命令</li>
+<li>/dev 设备文件</li>
+<li>/dev/pts&hellip; 虚拟终端</li>
 </ul>
-<h3 id="ls----查看当前目录下的文件">ls    查看当前目录下的文件</h3>
+<h3 id="ls-查看当前目录下的文件">ls 查看当前目录下的文件</h3>
 <ul>
 <li>
 <p>ls [选项,选项&hellip; ] 参数 &hellip;</p>
@@ -248,8 +248,8 @@ init 5</p>
 <li>
 <p>ls -al 显示的信息含义</p>
 <ul>
-<li>第一列共10位，第1位表示文档类型，d表示目录，-表示文件，l表示链接文件，b表示可随机存取的设备，如U盘等，c表示一次性读取设备，如鼠标、键盘等。后9位，依次对应三种身份所拥有的权限，身份顺序为：owner、group、others，权限顺序为：readable、writable、excutable。如：-r-xr-x&mdash;的含义为当前文档是一个文件，拥有者可读、可执行，同一个群组下的用户，可读、可写，其他人没有任何权限。+表示设置了文件访问权限列表 属主与属组权限冲突以属主为主</li>
-<li>第二列表示链接数，表示有多少个文件链接到inode号码。</li>
+<li>第一列共 10 位，第 1 位表示文档类型，d 表示目录，-表示文件，l 表示链接文件，b 表示可随机存取的设备，如 U 盘等，c 表示一次性读取设备，如鼠标、键盘等。后 9 位，依次对应三种身份所拥有的权限，身份顺序为：owner、group、others，权限顺序为：readable、writable、excutable。如：-r-xr-x&mdash;的含义为当前文档是一个文件，拥有者可读、可执行，同一个群组下的用户，可读、可写，其他人没有任何权限。+表示设置了文件访问权限列表 属主与属组权限冲突以属主为主</li>
+<li>第二列表示链接数，表示有多少个文件链接到 inode 号码。</li>
 <li>第三列表示拥有者</li>
 <li>第四列表示所属群组</li>
 <li>第五列表示文档容量大小，单位字节</li>
@@ -274,7 +274,7 @@ file
 <li>Access 最近访问信息</li>
 <li>Modify 最近更改信息 指文件内容</li>
 <li>Change 最近改动 指文件属性</li>
-<li>Birth  创建时间</li>
+<li>Birth 创建时间</li>
 </ul>
 </li>
 </ul>
@@ -284,7 +284,7 @@ file
 <li>cd ./path/to/&hellip; 相对路路径</li>
 <li>cd ../path/to/&hellip; 相对路路径</li>
 </ul>
-<h3 id="mkdir建立目目录">mkdir建立目目录</h3>
+<h3 id="mkdir-建立目目录">mkdir 建立目目录</h3>
 <p>mkdir
 常用用参数
 -p no error if existing, make parent directories as needed</p>
@@ -307,7 +307,7 @@ file
 <pre><code class="language-dotnetcli" data-lang="dotnetcli">rm -r + 待删除目录
 rm -rf + 待删除目录    # 删除前记得一定要反复检查 文件路径中不可以出现空格键 否则该文件路径会被rm指令当成两个路径 eg.`/a` and `/ a`
 </code></pre><h3 id="结束正在执行的命令">结束正在执行的命令</h3>
-<p>按ctrl + c</p>
+<p>按 ctrl + c</p>
 <h3 id="cp-复制文件和目录">cp 复制文件和目录</h3>
 <ul>
 <li>cp [选项] [文件或目录] [文件路径]</li>
@@ -327,26 +327,22 @@ rm -rf + 待删除目录    # 删除前记得一定要反复检查 文件路径�
 <li>mv [选项] 源文件 目标文件</li>
 <li>mv [选项] 源文件 目录</li>
 </ul>
-<h3 id="linus下文件的命名规则">Linus下文件的命名规则：</h3>
+<h3 id="linus-下文件的命名规则">Linus 下文件的命名规则：</h3>
 <h3 id="touch-命令">touch 命令</h3>
 <ul>
 <li>touch 创建空白文件： <code>touch + filename</code></li>
 <li>touch 修改文件时间戳
-<ul>
-<li>touch 修改文件最近访问时间： <code>touch -a filename -t + &quot;YYYYMMDDHHSS&quot;</code>  eg. 202005201314</li>
-<li>touch 修改文件最近更改时间： <code>touch -m filename -t + &quot;YYYYMMDD&quot;</code>      eg. 202005201314</li>
-<li>touch 一次性修改文件的最近访问时间与最近更改时间: <code>touch -d &quot;YYYYMMDD&quot;</code>  eg. 20200520 无指定具体时间，具体时间归零</li>
-<li>touch 无法人为修改最近改动时间
+_ touch 修改文件最近访问时间： <code>touch -a filename -t + &quot;YYYYMMDDHHSS&quot;</code> eg. 202005201314
+_ touch 修改文件最近更改时间： <code>touch -m filename -t + &quot;YYYYMMDD&quot;</code> eg. 202005201314
+_ touch 一次性修改文件的最近访问时间与最近更改时间: <code>touch -d &quot;YYYYMMDD&quot;</code> eg. 20200520 无指定具体时间，具体时间归零
+_ touch 无法人为修改最近改动时间
 注：rhel6 开始延迟修改</li>
-</ul>
-</li>
 </ul>
 <h3 id="文本查看命令">文本查看命令</h3>
 <ul>
 <li>cat 文本内容显示到终端</li>
 <li>head 查看文件开头</li>
-<li>tail 查看文件结尾
-*常用参数 -f 文件内容更更新后,显示信息同步更新</li>
+<li>tail 查看文件结尾 *常用参数 -f 文件内容更更新后,显示信息同步更新</li>
 <li>less</li>
 <li>more</li>
 <li>wc 统计文件内容信息
@@ -356,8 +352,8 @@ rm -rf + 待删除目录    # 删除前记得一定要反复检查 文件路径�
 </li>
 </ul>
 <h4 id="cat-more-less-区别">cat more less 区别：</h4>
-<p>cat是一次性显示整个文件的内容，还可以将多个文件连接起来显示，它常与重定向符号配合使用，适用于文件内容少的情况；
-more和less一般用于显示文件内容超过一屏的内容，并且提供翻页的功能。more比cat强大，提供分页显示的功能，less比more更强大，提供翻页，跳转，查找等命令。而且more和less都支持：用空格显示下一页，按键b显示上一页。</p>
+<p>cat 是一次性显示整个文件的内容，还可以将多个文件连接起来显示，它常与重定向符号配合使用，适用于文件内容少的情况；
+more 和 less 一般用于显示文件内容超过一屏的内容，并且提供翻页的功能。more 比 cat 强大，提供分页显示的功能，less 比 more 更强大，提供翻页，跳转，查找等命令。而且 more 和 less 都支持：用空格显示下一页，按键 b 显示上一页。</p>
 <h3 id="打包与压缩命令">打包与压缩命令</h3>
 <ul>
 <li>打包与解包
@@ -365,7 +361,7 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 <li>最早的 Linux 备份介质是磁带,使用的命令是 tar</li>
 <li>可以打包后的磁带文文件进行行行压缩储存,压缩的命令是 gzip 和 bzip2</li>
 <li>经常使用的扩展名是 .tar.gz(.tgz) .tar.bz2(.tbz2)</li>
-<li>Linux一般备份/etc文件 里面包含了Linux的主要配置文件</li>
+<li>Linux 一般备份/etc 文件 里面包含了 Linux 的主要配置文件</li>
 <li>常用参数：
 <ul>
 <li><code>-c</code> 打包</li>
@@ -375,37 +371,45 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 <li><code>-z</code> gzip 格式压缩和解压缩</li>
 <li><code>-j</code> bzip2 格式压缩和解压缩</li>
 <li><code>-v</code> 显示所有过程</li>
-<li><code>-C</code> change to directory DIR 后接需要解压到的目录 将tar包解压到该目录下</li>
+<li><code>-C</code> change to directory DIR 后接需要解压到的目录 将 tar 包解压到该目录下</li>
 <li><code>-t</code> list the contents of an archive</li>
 <li><code>--exclude</code> 可以用来指定排除掉的文件目录</li>
 </ul>
 </li>
 <li>tar 命令的具体使用：
 <ul>
-<li><code>tar -cf filename.tar filename</code>        打包filename文件为filename.tar文件</li>
-<li><code>tar -cJf filename.tar.xz filename</code>    打包并压缩filename文件为file.tar.xz文件</li>
-<li><code>tar -czf filename.tar.gz filename</code>    打包并压缩filename文件为file.tar.gz文件</li>
-<li><code>tar -cjf filename.tar.bz2 filename</code>   打包并压缩filename文件为file.tar.bz2文件</li>
-<li><code>tar -xf filename.tar filename</code>        解包filename.tar文件</li>
-<li><code>tar -xzf filename.tar.gz filename</code>    解压缩并解包filename.tar.gz文件</li>
-<li><code>tar -xjf filename.tar.bz2 filename</code>   解压缩并解包filename.tar.bz2文件</li>
-<li><code>tar -xJf filename.tar.xz filename</code>    解压缩并解包filename.tar.xz文件</li>
-<li><code>tar -xvf filename.tar.xz filename</code>    解压缩并解包filename.tar.xz文件</li>
-<li><code>tar -ztvf filename.tar.gz</code>           只列出包里的目录不解压解包</li>
-<li><code>tar -jtvf filename.tar.bz2</code>          只列出包里的目录不解压解包</li>
-<li><code>tar -Jtvf filename.tar.xz</code>           只列出包里的目录不解压解包</li>
+<li><code>tar -cf filename.tar filename</code> 打包 filename 文件为 filename.tar 文件</li>
+<li><code>tar -cJf filename.tar.xz filename</code> 打包并压缩 filename 文件为 file.tar.xz 文件</li>
+<li><code>tar -czf filename.tar.gz filename</code> 打包并压缩 filename 文件为 file.tar.gz 文件</li>
+<li><code>tar -cjf filename.tar.bz2 filename</code> 打包并压缩 filename 文件为 file.tar.bz2 文件</li>
+<li><code>tar -xf filename.tar filename</code> 解包 filename.tar 文件</li>
+<li><code>tar -xzf filename.tar.gz filename</code> 解压缩并解包 filename.tar.gz 文件</li>
+<li><code>tar -xjf filename.tar.bz2 filename</code> 解压缩并解包 filename.tar.bz2 文件</li>
+<li><code>tar -xJf filename.tar.xz filename</code> 解压缩并解包 filename.tar.xz 文件</li>
+<li><code>tar -xvf filename.tar.xz filename</code> 解压缩并解包 filename.tar.xz 文件</li>
+<li><code>tar -ztvf filename.tar.gz</code> 只列出包里的目录不解压解包</li>
+<li><code>tar -jtvf filename.tar.bz2</code> 只列出包里的目录不解压解包</li>
+<li><code>tar -Jtvf filename.tar.xz</code> 只列出包里的目录不解压解包</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>压缩与解压缩</li>
-<li>可以使用用xz gzip 和 bzip2 命令单独操作</li>
+<li>压缩与解压缩
+<ul>
+<li>可以使用 xz gzip 和 bzip2 命令单独操作</li>
 <li>通常和 tar 命令配合操作</li>
 <li>常用用参数
 <ul>
 <li>-J xz 格式压缩和解压缩</li>
 <li>-z gzip 格式压缩和解压缩</li>
 <li>-j bzip2 格式压缩和解压缩</li>
+</ul>
+</li>
+<li>.zip 格式的压缩包的解压缩
+<ul>
+<li>-d 需要解压到的目录</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -421,7 +425,7 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 <li>l 光标向右</li>
 <li>x 删除光标所在字符</li>
 <li>r 替换光标所在字符</li>
-<li>数字n + G 跳转到n行</li>
+<li>数字 n + G 跳转到 n 行</li>
 <li>G 光标跳到最后一行</li>
 <li>^ 跳到行首</li>
 <li>$ 跳到行尾</li>
@@ -429,9 +433,9 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 <ul>
 <li>复制(yank)
 <ul>
-<li>y    用v命令选中文本后，用y进行复制</li>
-<li>yy   复制当前行，然后用p进行粘贴 前面可加数字n,复制从当前行开始的n行</li>
-<li>y$   从当前位置复制到行尾</li>
+<li>y 用 v 命令选中文本后，用 y 进行复制</li>
+<li>yy 复制当前行，然后用 p 进行粘贴 前面可加数字 n,复制从当前行开始的 n 行</li>
+<li>y$ 从当前位置复制到行尾</li>
 </ul>
 </li>
 <li>粘贴(paste)
@@ -457,10 +461,10 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 </li>
 <li>进入其他模式
 <ul>
-<li>i I a A o O  进入插入模式</li>
+<li>i I a A o O 进入插入模式</li>
 <li>v V ctrl + v 进入可视化模式</li>
-<li>:            进入命令模式</li>
-<li>esc          从其他模式回到正常模式</li>
+<li>: 进入命令模式</li>
+<li>esc 从其他模式回到正常模式</li>
 </ul>
 </li>
 </ul>
@@ -477,22 +481,22 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 </li>
 <li>Command-mode(命令模式)
 <ul>
-<li>set nu   显示行号</li>
+<li>set nu 显示行号</li>
 <li>set nonu 隐藏行号</li>
-<li>q  退出</li>
-<li>w  保存文件</li>
+<li>q 退出</li>
+<li>w 保存文件</li>
 <li>wq 保存并退出</li>
-<li>w + filename 保存文件并将文件命名为filename</li>
-<li>! + 临时执行一条Linux命令</li>
+<li>w + filename 保存文件并将文件命名为 filename</li>
+<li>! + 临时执行一条 Linux 命令</li>
 <li>/ + 字符串 搜索指定字符串
 <ul>
 <li>n 向下选中匹配到的字符串</li>
 <li>N 向上选中匹配到的字符串</li>
-<li>s/old/new      单次替换光标所在行匹配到的字符串</li>
-<li>s/old/new/g    替换光标所在行所有匹配到所有字符串</li>
-<li>%s/old/new/g   替换全文匹配到的所有字符串</li>
-<li>m,ns/old/new   把第m行到第n行匹配到的字符串进行单次替换</li>
-<li>m,ns/old/now/g 把第m行到第n行匹配到的所有字符串替换</li>
+<li>s/old/new 单次替换光标所在行匹配到的字符串</li>
+<li>s/old/new/g 替换光标所在行所有匹配到所有字符串</li>
+<li>%s/old/new/g 替换全文匹配到的所有字符串</li>
+<li>m,ns/old/new 把第 m 行到第 n 行匹配到的字符串进行单次替换</li>
+<li>m,ns/old/now/g 把第 m 行到第 n 行匹配到的所有字符串替换</li>
 </ul>
 </li>
 </ul>
@@ -511,7 +515,7 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 </li>
 </ul>
 </li>
-<li>配置vim</li>
+<li>配置 vim</li>
 </ul>
 <pre><code class="language-dotnetcli" data-lang="dotnetcli">vim /etc/vim/vimrc
 </code></pre><h3 id="用户与权限管理">用户与权限管理</h3>
@@ -531,43 +535,43 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 <li>用户管理常用命令
 <ul>
 <li>id + username 查看用户信息</li>
-<li>useradd    新建用户
+<li>useradd 新建用户
 <ul>
-<li>useradd + username 添加username用户 用户组名同用户名 系统自动创建/home/username目录 并在该目录下自动生成用户配置文件 在/etc/passwd(用户管理信息)和/etc/shadow(与密码相关)添加一行以username开头的行 /etc/passwd 文件中各个字段名的意思&mdash;注册名：口令：用户标识号：组标识号：注释：用户主目录：命令解释程序 注意：如果passwd字段中的第一个字符是“*”的话，那么，就表示该账号被查封了，系统不允许持有该账号的用户登录。现在的Unix/Linux系统中，口令不再直接保存在passwd文件中，通常将passwd文件中的口令字段使用一个“x”来代替，将/etc /shadow作为真正的口令文件，用于保存包括个人口令在内的数据。当然shadow文件是不能被普通用户读取的，只有超级用户才有权读取。/etc/shadow 文件中字段主要含义为：登录名:加密口令:最后一次修改时间:最小时间间隔:最大时间间隔:警告时间:不活动时间:失效时间:标志 “登录名”是与/etc/passwd文件中的登录名相一致的用户账号,“口令”字段存放的是加密后的用户口令字：如果为空，则对应用户没有口令，登录时不需要口令；星号代表帐号被锁定；双叹号表示这个密码已经过期了；$6$开头的，表明是用SHA-512加密；$1$表明是用MD5加密；$2$ 是用Blowfish加密；$5$ 是用 SHA-256加密；“最后一次修改时间”表示的是从某个时刻起，到用户最后一次修改口令时的天数。时间起点对不同的系统可能不一样。例如在SCOLinux中，这个时间起点是1970年1月1日。“最小时间间隔”指的是两次修改口令之间所需的最小天数。“最大时间间隔”指的是口令保持有效的最大天数。“警告时间”字段表示的是从系统开始警告用户到用户密码正式失效之间的天数。“不活动时间”表示的是用户没有登录活动但账号仍能保持有效的最大天数。“失效时间”字段给出的是一个绝对的天数，如果使用了这个字段，那么就给出相应账号的生存期。期满后，该账号就不再是一个合法的账号，也就不能再用来登录了。</li>
+<li>useradd + username 添加 username 用户 用户组名同用户名 系统自动创建/home/username 目录 并在该目录下自动生成用户配置文件 在/etc/passwd(用户管理信息)和/etc/shadow(与密码相关)添加一行以 username 开头的行 /etc/passwd 文件中各个字段名的意思&mdash;注册名：口令：用户标识号：组标识号：注释：用户主目录：命令解释程序 注意：如果 passwd 字段中的第一个字符是“*”的话，那么，就表示该账号被查封了，系统不允许持有该账号的用户登录。现在的 Unix/Linux 系统中，口令不再直接保存在 passwd 文件中，通常将 passwd 文件中的口令字段使用一个“x”来代替，将/etc /shadow 作为真正的口令文件，用于保存包括个人口令在内的数据。当然 shadow 文件是不能被普通用户读取的，只有超级用户才有权读取。/etc/shadow 文件中字段主要含义为：登录名:加密口令:最后一次修改时间:最小时间间隔:最大时间间隔:警告时间:不活动时间:失效时间:标志 “登录名”是与/etc/passwd 文件中的登录名相一致的用户账号,“口令”字段存放的是加密后的用户口令字：如果为空，则对应用户没有口令，登录时不需要口令；星号代表帐号被锁定；双叹号表示这个密码已经过期了；$6$开头的，表明是用 SHA-512 加密；$1$表明是用 MD5 加密；$2$ 是用 Blowfish 加密；$5$ 是用 SHA-256 加密；“最后一次修改时间”表示的是从某个时刻起，到用户最后一次修改口令时的天数。时间起点对不同的系统可能不一样。例如在 SCOLinux 中，这个时间起点是 1970 年 1 月 1 日。“最小时间间隔”指的是两次修改口令之间所需的最小天数。“最大时间间隔”指的是口令保持有效的最大天数。“警告时间”字段表示的是从系统开始警告用户到用户密码正式失效之间的天数。“不活动时间”表示的是用户没有登录活动但账号仍能保持有效的最大天数。“失效时间”字段给出的是一个绝对的天数，如果使用了这个字段，那么就给出相应账号的生存期。期满后，该账号就不再是一个合法的账号，也就不能再用来登录了。</li>
 </ul>
 </li>
-<li>adduser + username 比useradd更加的好用
-<a href="https://opensofty.com/zh-cn/2019/11/18/%E5%A6%82%E4%BD%95%E5%9C%A8ubuntu-20.04%E4%B8%8A%E5%88%9B%E5%BB%BA%E6%96%B0%E7%94%A8%E6%88%B7/">adduser参考</a></li>
-<li>userdel    删除用户
+<li>adduser + username 比 useradd 更加的好用
+<a href="https://opensofty.com/zh-cn/2019/11/18/%E5%A6%82%E4%BD%95%E5%9C%A8ubuntu-20.04%E4%B8%8A%E5%88%9B%E5%BB%BA%E6%96%B0%E7%94%A8%E6%88%B7/">adduser 参考</a></li>
+<li>userdel 删除用户
 <ul>
-<li>userdel + username 删除用户的同时/home下的用户数据会被保留下来</li>
-<li>userdel -r + username 删除用户的同时/home下的用户数据也会被删除</li>
+<li>userdel + username 删除用户的同时/home 下的用户数据会被保留下来</li>
+<li>userdel -r + username 删除用户的同时/home 下的用户数据也会被删除</li>
 </ul>
 </li>
-<li>passwd     修改用户密码
+<li>passwd 修改用户密码
 <ul>
 <li>passwd 修改当前用户的密码</li>
-<li>passwd + username 修改username用户的密码</li>
+<li>passwd + username 修改 username 用户的密码</li>
 </ul>
 </li>
-<li>usermod    修改用户属性
+<li>usermod 修改用户属性
 <ul>
-<li>usermod -d + dirname + username 把username用户的家目录设置为dirname</li>
-<li>usermod -g + groupname + username 将username添加到groupname</li>
+<li>usermod -d + dirname + username 把 username 用户的家目录设置为 dirname</li>
+<li>usermod -g + groupname + username 将 username 添加到 groupname</li>
 </ul>
 </li>
-<li>chage      修改用户属性 对用户的生命周期进行修改</li>
+<li>chage 修改用户属性 对用户的生命周期进行修改</li>
 </ul>
 </li>
 <li>组管理命令
 <ul>
-<li>groupadd    新建用户组
+<li>groupadd 新建用户组
 <ul>
 <li>groupadd + groupname 添加用户组<!-- raw HTML omitted --></li>
-<li>usermod -g + groupname + username 将username添加到groupname</li>
+<li>usermod -g + groupname + username 将 username 添加到 groupname</li>
 </ul>
 </li>
-<li>groupdel    删除用户组</li>
+<li>groupdel 删除用户组</li>
 </ul>
 </li>
 <li>用户切换
@@ -575,13 +579,13 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 <li>su 命令
 <ul>
 <li>su USERNAME 切换用户</li>
-<li>su - USERNAME 使用login shell 方式切换用户</li>
+<li>su - USERNAME 使用 login shell 方式切换用户</li>
 </ul>
 </li>
 <li>sudo 命令
 <ul>
 <li>sudo 以其他用户身份执行命令</li>
-<li>visudo 设置需要使用sudo的用户(组)</li>
+<li>visudo 设置需要使用 sudo 的用户(组)</li>
 </ul>
 </li>
 </ul>
@@ -590,27 +594,27 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 <h3 id="用户的配置文件">用户的配置文件</h3>
 <ul>
 <li>
-<p>/root          root用户的家目录</p>
+<p>/root root 用户的家目录</p>
 </li>
 <li>
 <p>/home/USERNAME 普通用户默认家目录位置</p>
 </li>
 <li>
-<p>/etc/passwd    用户配置文件</p>
+<p>/etc/passwd 用户配置文件</p>
 <ul>
 <li>/etc/passwd 文件中各个字段名的含义&mdash;用户名：口令：用户标识号：组标识号：注释：用户主目录：命令解释程序</li>
-<li>注意：如果passwd字段中的第一个字符是“*”的话，那么，就表示该账号被查封了，系统不允许持有该账号的用户登录</li>
-<li>第二个字段为空时，登录免密，现在的Unix/Linux系统中，口令不再直接保存在passwd文件中，通常将passwd文件中的口令字段使用一个“x”来代替，将/etc /shadow作为真正的口令文件，用于保存包括个人口令在内的数据。当然shadow文件是不能被普通用户读取的，只有超级用户才有权读取。</li>
+<li>注意：如果 passwd 字段中的第一个字符是“*”的话，那么，就表示该账号被查封了，系统不允许持有该账号的用户登录</li>
+<li>第二个字段为空时，登录免密，现在的 Unix/Linux 系统中，口令不再直接保存在 passwd 文件中，通常将 passwd 文件中的口令字段使用一个“x”来代替，将/etc /shadow 作为真正的口令文件，用于保存包括个人口令在内的数据。当然 shadow 文件是不能被普通用户读取的，只有超级用户才有权读取。</li>
 <li>第七个字段若为/sbin/nologin,则其无法登录</li>
 </ul>
 </li>
 <li>
-<p>/etc/shadow    用户密码相关配置文件</p>
+<p>/etc/shadow 用户密码相关配置文件</p>
 <ul>
 <li>/etc/shadow 文件中字段主要含义为&mdash;登录名:加密口令:最后一次修改时间:最小时间间隔:最大时间间隔:警告时间:不活动时间:失效时间:标志</li>
-<li>登录名”是与/etc/passwd文件中的登录名相一致的用户账号,“口令”字段存放的是加密后的用户口令字：如果为空，则对应用户没有口令，登录时不需要口令；星号代表帐号被锁定；双叹号表示这个密码已经过期了；</li>
-<li>$6$开头的，表明是用SHA-512加密；$1$表明是用MD5加密；$2$ 是用Blowfish加密；$5$ 是用 SHA-256加密；</li>
-<li>“最后一次修改时间”表示的是从某个时刻起，到用户最后一次修改口令时的天数。时间起点对不同的系统可能不一样。例如在SCOLinux中，这个时间起点是1970年1月1日。</li>
+<li>登录名”是与/etc/passwd 文件中的登录名相一致的用户账号,“口令”字段存放的是加密后的用户口令字：如果为空，则对应用户没有口令，登录时不需要口令；星号代表帐号被锁定；双叹号表示这个密码已经过期了；</li>
+<li>$6$开头的，表明是用 SHA-512 加密；$1$表明是用 MD5 加密；$2$ 是用 Blowfish 加密；$5$ 是用 SHA-256 加密；</li>
+<li>“最后一次修改时间”表示的是从某个时刻起，到用户最后一次修改口令时的天数。时间起点对不同的系统可能不一样。例如在 SCOLinux 中，这个时间起点是 1970 年 1 月 1 日。</li>
 <li>“最小时间间隔”指的是两次修改口令之间所需的最小天数。</li>
 <li>“最大时间间隔”指的是口令保持有效的最大天数。</li>
 <li>“警告时间”字段表示的是从系统开始警告用户到用户密码正式失效之间的天数。</li>
@@ -619,7 +623,7 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 </ul>
 </li>
 <li>
-<p>/etc/group     用户组配置文件</p>
+<p>/etc/group 用户组配置文件</p>
 <ul>
 <li>/etc/shadow 文件中字段主要含义为：用户组名：口令：组标识号(gid): 组内用户列表</li>
 </ul>
@@ -641,11 +645,11 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 <li>x = 1</li>
 </ul>
 </li>
-<li>创建新文件有默认权限，根据umask值计算，属主和属组根据当前进程的用户来设定</li>
+<li>创建新文件有默认权限，根据 umask 值计算，属主和属组根据当前进程的用户来设定</li>
 <li>ls -al 显示的信息含义
 <ul>
-<li>第一列共10位，第1位表示文档类型，d表示目录，-表示文件，l表示链接文件，b表示可随机存取的设备，如U盘等，c表示一次性读取设备，如鼠标、键盘等。后9位，依次对应三种身份所拥有的权限，身份顺序为：owner、group、others，权限顺序为：readable、writable、excutable。如：-r-xr-x&mdash;的含义为当前文档是一个文件，拥有者可读、可执行，同一个群组下的用户，可读、可写，其他人没有任何权限。</li>
-<li>第二列表示链接数，表示有多少个文件链接到inode号码。</li>
+<li>第一列共 10 位，第 1 位表示文档类型，d 表示目录，-表示文件，l 表示链接文件，b 表示可随机存取的设备，如 U 盘等，c 表示一次性读取设备，如鼠标、键盘等。后 9 位，依次对应三种身份所拥有的权限，身份顺序为：owner、group、others，权限顺序为：readable、writable、excutable。如：-r-xr-x&mdash;的含义为当前文档是一个文件，拥有者可读、可执行，同一个群组下的用户，可读、可写，其他人没有任何权限。</li>
+<li>第二列表示链接数，表示有多少个文件链接到 inode 号码。</li>
 <li>第三列表示拥有者</li>
 <li>第四列表示所属群组</li>
 <li>第五列表示文档容量大小，单位字节</li>
@@ -657,7 +661,7 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 </ul>
 <h3 id="目录权限的表示方法">目录权限的表示方法</h3>
 <ul>
-<li>r 拥有此权限表示可以读取此目录的结构列表，也就是说可以查看该目录下的文件名和子目录名（ls查看）</li>
+<li>r 拥有此权限表示可以读取此目录的结构列表，也就是说可以查看该目录下的文件名和子目录名（ls 查看）</li>
 <li>w 可以在此目录中创建文件，也可以删除、重命名移动文件</li>
 <li>x 具有进入此目录的权限</li>
 </ul>
@@ -665,28 +669,28 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 <ul>
 <li>chmod 修改文件、目录权限
 <ul>
-<li>chmod u+x /tmp/testfile    属主加上执行权限</li>
-<li>chmod g-r filename         同组用户减少读权限</li>
-<li>chmod u=rwx filename       属主加上读写执行命令权限</li>
-<li>chmod a+r filename         属主同组用户包括其他用户全都加上读权限</li>
+<li>chmod u+x /tmp/testfile 属主加上执行权限</li>
+<li>chmod g-r filename 同组用户减少读权限</li>
+<li>chmod u=rwx filename 属主加上读写执行命令权限</li>
+<li>chmod a+r filename 属主同组用户包括其他用户全都加上读权限</li>
 <li>chmod 755 /tmp/testfile</li>
 </ul>
 </li>
 <li>umask</li>
-<li>创建新文件/文件夹有默认权限，根据umask值(root用户默认为0022，普通用户默认为0002)计算，文件默认权限为0666-umask，文件夹默认权限为0777-umask属主和属组根据当前进程的用户来设定</li>
+<li>创建新文件/文件夹有默认权限，根据 umask 值(root 用户默认为 0022，普通用户默认为 0002)计算，文件默认权限为 0666-umask，文件夹默认权限为 0777-umask 属主和属组根据当前进程的用户来设定</li>
 <li>chown 更改属主、属组
 <ul>
-<li>chown username filename    把文件filename属主改为username</li>
-<li>chown :groupname filename  把文件filename属组改为groupname</li>
-<li>chown username:groupname filename 同时对属主与属组进行修改 把文件filename属主改为username 把文件filename属组改为groupname</li>
+<li>chown username filename 把文件 filename 属主改为 username</li>
+<li>chown :groupname filename 把文件 filename 属组改为 groupname</li>
+<li>chown username:groupname filename 同时对属主与属组进行修改 把文件 filename 属主改为 username 把文件 filename 属组改为 groupname</li>
 </ul>
 </li>
 <li>chgrp 可以单独更改属组 不常用
 <ul>
-<li>chgrp groupname filename   把文件filename属组改为groupname</li>
+<li>chgrp groupname filename 把文件 filename 属组改为 groupname</li>
 </ul>
 </li>
-<li>root用户有特权即使没有权限也可以执行rwx操作</li>
+<li>root 用户有特权即使没有权限也可以执行 rwx 操作</li>
 </ul>
 <h3 id="特殊权限">特殊权限</h3>
 <ul>
@@ -704,18 +708,18 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 <li>SBIT t</li>
 </ul>
 </li>
-<li>SUID    用于二进制可执行文件，执行命令时取得文件属主的权限(SUID 权限仅对二进制可执行文件有效，当二进制文件权限信息的第四个字段为s时且执行者对于该二进制可执行文件具有 x 的权限，执行者将具有该文件的所有者的权限，该权限仅在执行该二进制可执行文件的过程中有效)
+<li>SUID 用于二进制可执行文件，执行命令时取得文件属主的权限(SUID 权限仅对二进制可执行文件有效，当二进制文件权限信息的第四个字段为 s 时且执行者对于该二进制可执行文件具有 x 的权限，执行者将具有该文件的所有者的权限，该权限仅在执行该二进制可执行文件的过程中有效)
 <ul>
 <li>如/usr/bin/passwd</li>
 <li>chmod 4755 filename</li>
 </ul>
 </li>
-<li>SGID    用于二进制可执行文件(同SUID)，也可用于目录，在该目录下创建新的文件和目录，权限自动更改为该目录的属组(常用于文件共享，用户若对此目录具有 r 和 x 权限，该用户能够进入该目录，用户在此目录下的有效用户组将变成该目录的用户组，若用户在此目录下拥有 w 权限，则用户所创建的新文件的用户组与该目录的用户组相同)
+<li>SGID 用于二进制可执行文件(同 SUID)，也可用于目录，在该目录下创建新的文件和目录，权限自动更改为该目录的属组(常用于文件共享，用户若对此目录具有 r 和 x 权限，该用户能够进入该目录，用户在此目录下的有效用户组将变成该目录的用户组，若用户在此目录下拥有 w 权限，则用户所创建的新文件的用户组与该目录的用户组相同)
 <ul>
 <li>chmod 2755 filename</li>
 </ul>
 </li>
-<li>SBIT    用于目录，该目录下新建的文件和目录，仅root和自己可以删除(文件权限信息的最后一个字段为t,SBIT 是 the  restricted  deletion  flag  or  sticky  bit 的简称,SBIT 目前只对目录有效，用来阻止非文件的所有者删除文件)
+<li>SBIT 用于目录，该目录下新建的文件和目录，仅 root 和自己可以删除(文件权限信息的最后一个字段为 t,SBIT 是 the restricted deletion flag or sticky bit 的简称,SBIT 目前只对目录有效，用来阻止非文件的所有者删除文件)
 <ul>
 <li>如/tmp</li>
 <li>chmod 1755 filename</li>
@@ -740,10 +744,12 @@ more和less一般用于显示文件内容超过一屏的内容，并且提供翻
 </ul>
 <h2 id="linux-系统管理">Linux 系统管理</h2>
 <ul>
-<li>网络状态查看
-net-tools VS iproute
+<li>
+<p>网络状态查看
+net-tools VS iproute</p>
 <ul>
-<li>net-tools (centOS7前)
+<li>
+<p>net-tools (centOS7 前)</p>
 <ul>
 <li>
 <p>ifconfig</p>
@@ -751,41 +757,41 @@ net-tools VS iproute
 <li>eth0 第一块网卡(网络接口)</li>
 <li>你的第一个网络接口可能叫做下面的名字
 <ul>
-<li>eno1    板载网卡</li>
-<li>ens33   PCI-E网卡</li>
-<li>enp0s3  无法获取物理信息的PCI-E</li>
-<li>CentOS 7 使用了一致性网络设备命名，以上都不匹配则使用eth0</li>
+<li>eno1 板载网卡</li>
+<li>ens33 PCI-E 网卡</li>
+<li>enp0s3 无法获取物理信息的 PCI-E</li>
+<li>CentOS 7 使用了一致性网络设备命名，以上都不匹配则使用 eth0</li>
 </ul>
 </li>
 <li>网络接口命名修改
 <ul>
-<li>网卡命名规则受biosdevname和net.ifnames 两个参数影响</li>
-<li>编辑/etc/default/grub文件，增加biosdevname=0 net.ifnames=0
+<li>网卡命名规则受 biosdevname 和 net.ifnames 两个参数影响</li>
+<li>编辑/etc/default/grub 文件，增加 biosdevname=0 net.ifnames=0
 <ul>
-<li>默认      biosdevname=0 net.ifnames=1 网卡名为ens33</li>
-<li>组合一    biosdevname=1 net.ifnames=0 网卡名为em1</li>
-<li>组合二    biosdevname=0 net.ifnames=0 网卡名为eth0</li>
+<li>默认 biosdevname=0 net.ifnames=1 网卡名为 ens33</li>
+<li>组合一 biosdevname=1 net.ifnames=0 网卡名为 em1</li>
+<li>组合二 biosdevname=0 net.ifnames=0 网卡名为 eth0</li>
 </ul>
 </li>
-<li>更新grub <code>grub2-mkconfig -o /boot/grub2/grub.cfg</code></li>
+<li>更新 grub <code>grub2-mkconfig -o /boot/grub2/grub.cfg</code></li>
 <li>重启 <code>reboot</code></li>
 </ul>
 </li>
-<li>普通用户用ifconfig命令查看用户网卡信息要给出完整的ifconfig命令文件路径 /sbin/ifconfig
+<li>普通用户用 ifconfig 命令查看用户网卡信息要给出完整的 ifconfig 命令文件路径 /sbin/ifconfig
 <ul>
 <li>本机网卡信息
 <ul>
-<li>inet 网卡的iPv4地址</li>
-<li>inet6 网卡的iPv6地址</li>
-<li>netmask IP地址对应的子网掩码</li>
-<li>ether 网卡的MAC地址</li>
+<li>inet 网卡的 iPv4 地址</li>
+<li>inet6 网卡的 iPv6 地址</li>
+<li>netmask IP 地址对应的子网掩码</li>
+<li>ether 网卡的 MAC 地址</li>
 <li>RX 接收了多少数据包</li>
 <li>TX 发送了多少数据包</li>
 </ul>
 </li>
 <li>lo 本地的环回
 <ul>
-<li>inet iPv4地址永远是127.0.0.1 用于环回测试</li>
+<li>inet iPv4 地址永远是 127.0.0.1 用于环回测试</li>
 </ul>
 </li>
 </ul>
@@ -793,9 +799,9 @@ net-tools VS iproute
 </ul>
 </li>
 <li>
-<p>route    查看网关</p>
+<p>route 查看网关</p>
 <ul>
-<li>route -n 使用 -n参数不解析主机名</li>
+<li>route -n 使用 -n 参数不解析主机名</li>
 </ul>
 </li>
 <li>
@@ -803,7 +809,8 @@ net-tools VS iproute
 </li>
 </ul>
 </li>
-<li>iproute2 (centos7后)
+<li>
+<p>iproute2 (centos7 后)</p>
 <ul>
 <li>ip
 <ul>
@@ -813,90 +820,97 @@ net-tools VS iproute
 <li>ss</li>
 </ul>
 </li>
-<li>mill-tool eth0 查看网卡物理连接情况</li>
+<li>
+<p>mill-tool eth0 查看网卡物理连接情况</p>
+</li>
 </ul>
 </li>
-<li>网络配置
+<li>
+<p>网络配置</p>
 <ul>
-<li>ip addr add &lt;ip地址/掩码位&gt;</li>
-<li>ifconfig &lt;接口&gt; &lt;ip地址&gt; [netmask 子网掩码]</li>
+<li>ip addr add &lt;ip 地址/掩码位&gt;</li>
+<li>ifconfig &lt;接口&gt; &lt;ip 地址&gt; [netmask 子网掩码]</li>
 <li>ifup &lt;接口&gt;</li>
 <li>ip link set dev eth0 up</li>
-<li>ifdown &lt;接口&gt;  ifdown ifup 可以重置网卡为默认值</li>
+<li>ifdown &lt;接口&gt; ifdown ifup 可以重置网卡为默认值</li>
 <li>ip link set dev eth0 down</li>
 </ul>
 </li>
-<li>路由命令
+<li>
+<p>路由命令</p>
 <ul>
 <li>添加网关
 <ul>
-<li>route default gw &lt;网关ip&gt;</li>
-<li>route add -host &lt;指定ip&gt; gw &lt;网关ip&gt;</li>
-<li>route add -net &lt;指定网段&gt; netmask &lt;子网掩码&gt; gw &lt;网关ip&gt;</li>
-<li>ip route add &lt;指定ip地址/掩码位&gt; via &lt;网关ip&gt;</li>
+<li>route default gw &lt;网关 ip&gt;</li>
+<li>route add -host &lt;指定 ip&gt; gw &lt;网关 ip&gt;</li>
+<li>route add -net &lt;指定网段&gt; netmask &lt;子网掩码&gt; gw &lt;网关 ip&gt;</li>
+<li>ip route add &lt;指定 ip 地址/掩码位&gt; via &lt;网关 ip&gt;</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>网络故障排除
+<li>
+<p>网络故障排除</p>
 <ul>
 <li>ping 查看当前主机与目标主机网络是否连通</li>
-<li>traceroute 检测当前主机与目的主机网络的连接状况 追踪每一跳的服务质量 辅助ping来使用</li>
-<li>mtr 检测当前主机与目的主机网络之间的传送中间是否有些数据包给丢失了 辅助ping来使用 显示内容比traceroute更丰富</li>
-<li>nslookup 查看域名对应的ip 输入server查看DNS exit退出</li>
+<li>traceroute 检测当前主机与目的主机网络的连接状况 追踪每一跳的服务质量 辅助 ping 来使用</li>
+<li>mtr 检测当前主机与目的主机网络之间的传送中间是否有些数据包给丢失了 辅助 ping 来使用 显示内容比 traceroute 更丰富</li>
+<li>nslookup 查看域名对应的 ip 输入 server 查看 DNS exit 退出</li>
 <li>dig</li>
-<li>telnet 主机能够连接但依旧不能连接 查看端口的连接状态 ctrl + ] 退出查看  输入quit退出telnet</li>
+<li>telnet 主机能够连接但依旧不能连接 查看端口的连接状态 ctrl + ] 退出查看 输入 quit 退出 telnet</li>
 <li>tcpdump 网络抓包服务 分析数据包
 <ul>
 <li>tcpdump -i any 抓取所有网卡中的数据包</li>
-<li>tcpdump -i any -n 抓取所有网卡中的数据包 把有域名的都解析成ip地址格式</li>
+<li>tcpdump -i any -n 抓取所有网卡中的数据包 把有域名的都解析成 ip 地址格式</li>
 <li>tcpdump -i any -n port &lt;端口号&gt; 抓取所有网卡中&lt;端口号&gt;端口的数据包</li>
-<li>tcpdump -i any -n host &lt;ip地址&gt; 抓取从我的主机到&lt;ip地址&gt;的所有数据包</li>
-<li>tcpdump -i any -n host &lt;ip地址&gt; and port &lt;端口号&gt; 抓取从我的主机到&lt;ip地址&gt;的&lt;端口号&gt;端口的所有数据包</li>
-<li>tcpdump -i any -n host &lt;ip地址&gt; and port &lt;端口号&gt; -w /tmp/filename 抓取从我的主机到&lt;ip地址&gt;的&lt;端口号&gt;端口的所有数据包并保存到/tmp/filename</li>
+<li>tcpdump -i any -n host &lt;ip 地址&gt; 抓取从我的主机到&lt;ip 地址&gt;的所有数据包</li>
+<li>tcpdump -i any -n host &lt;ip 地址&gt; and port &lt;端口号&gt; 抓取从我的主机到&lt;ip 地址&gt;的&lt;端口号&gt;端口的所有数据包</li>
+<li>tcpdump -i any -n host &lt;ip 地址&gt; and port &lt;端口号&gt; -w /tmp/filename 抓取从我的主机到&lt;ip 地址&gt;的&lt;端口号&gt;端口的所有数据包并保存到/tmp/filename</li>
 </ul>
 </li>
 <li>netstat -ntpl 查看服务的监听范围
 <ul>
-<li>-n 显示ip地址</li>
-<li>-t 以tcp的方式来截取我们想要显示的内容，udp就不显示了</li>
+<li>-n 显示 ip 地址</li>
+<li>-t 以 tcp 的方式来截取我们想要显示的内容，udp 就不显示了</li>
 <li>-p 把端口对应的进程也显示出来</li>
-<li>-l tcp的一个状态</li>
+<li>-l tcp 的一个状态</li>
 </ul>
 </li>
-<li>ss -ntpl 查看服务的监听范围 与netstat 相似</li>
+<li>ss -ntpl 查看服务的监听范围 与 netstat 相似</li>
 </ul>
 </li>
-<li>网络服务管理
+<li>
+<p>网络服务管理</p>
 <ul>
 <li>SystV
 <ul>
 <li>service network start|stop|restart</li>
 <li>chkconfig &ndash;list network</li>
-<li>chkconfig &ndash;level &lt;服务级别&gt; network  off</li>
+<li>chkconfig &ndash;level &lt;服务级别&gt; network off</li>
 </ul>
 </li>
 <li>systemd
 <ul>
-<li>systemctl list-unit-files [<!-- raw HTML omitted -->]	// 可以查看是否设置为开机自启动</li>
+<li>systemctl list-unit-files [<!-- raw HTML omitted -->] // 可以查看是否设置为开机自启动</li>
 <li>systemctl start|stop|restart <!-- raw HTML omitted -->
 <ul>
-<li>systemctl systemctl enable|disable <!-- raw HTML omitted -->	// 设置是否开机自启动</li>
+<li>systemctl systemctl enable|disable <!-- raw HTML omitted --> // 设置是否开机自启动</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>常用网络配置文件
+<li>
+<p>常用网络配置文件</p>
 <ul>
 <li>/etc/sysconfig/network-scripts/</li>
 <li>ifcfg-eth0
 <ul>
 <li>BOOTPROTO
 <ul>
-<li>&ldquo;dhcp&rdquo; 动态分配IP 自动获取ip地址</li>
-<li>&ldquo;static&quot;或 none 静态分配IP
+<li>&ldquo;dhcp&rdquo; 动态分配 IP 自动获取 ip 地址</li>
+<li>&ldquo;static&quot;或 none 静态分配 IP
 <ul>
 <li>IPADDR</li>
 <li>NETMASK</li>
@@ -915,9 +929,9 @@ net-tools VS iproute
 </ul>
 </li>
 <li>hostname <!-- raw HTML omitted --> 将主机名改为<!-- raw HTML omitted --> 临时生效</li>
-<li>/etc/hosts 很多服务依赖于主机名进行服务的,所以主机名改变后,要将 <code>127.0.0.1 &lt;newhostname&gt;</code> 写入/etc/hosts中 否则可能会导致系统开机过慢(系统服务无法从hosts解析IP只能等待超时)</li>
-<li>systemctl restart NetworkManager o service network restart重启生效</li>
-<li>hostnamectl set-hostname <!-- raw HTML omitted --> 永久更改hostname 接着需要修改/etc/hosts文件</li>
+<li>/etc/hosts 很多服务依赖于主机名进行服务的,所以主机名改变后,要将 <code>127.0.0.1 &lt;newhostname&gt;</code> 写入/etc/hosts 中 否则可能会导致系统开机过慢(系统服务无法从 hosts 解析 IP 只能等待超时)</li>
+<li>systemctl restart NetworkManager o service network restart 重启生效</li>
+<li>hostnamectl set-hostname <!-- raw HTML omitted --> 永久更改 hostname 接着需要修改/etc/hosts 文件</li>
 </ul>
 </li>
 </ul>
@@ -926,16 +940,16 @@ net-tools VS iproute
 <li>软件包管理器
 <ul>
 <li>包管理器是方便软件安装 装载,解决软件依赖关系的重要工具</li>
-<li>CentOS RedHat使用yum包管理器,软件安装包格式为rpm</li>
-<li>Debian Ubuntu使用apt包管理器,软件安装包为deb</li>
+<li>CentOS RedHat 使用 yum 包管理器,软件安装包格式为 rpm</li>
+<li>Debian Ubuntu 使用 apt 包管理器,软件安装包为 deb</li>
 </ul>
 </li>
-<li>rpm包与rpm命令
+<li>rpm 包与 rpm 命令
 <ul>
-<li>rpm包 软件名称 软件版本 系统版本 平台</li>
+<li>rpm 包 软件名称 软件版本 系统版本 平台</li>
 <li>rpm 命令常用参数
 <ul>
-<li>-qa 系统安装的所有rpm软件包</li>
+<li>-qa 系统安装的所有 rpm 软件包</li>
 <li>-q 查询软件包</li>
 <li>-i 安装软件包</li>
 <li>-e 卸载软件</li>
@@ -948,21 +962,21 @@ net-tools VS iproute
 <li>mount &lt;光盘路径&gt; /mnt 把&lt;光盘路径&gt;挂载到/mnt</li>
 </ul>
 </li>
-<li>yum仓库/管理器
+<li>yum 仓库/管理器
 <ul>
-<li>rpm包的问题
+<li>rpm 包的问题
 <ul>
 <li>需要自己解决依赖问题</li>
 <li>软件包来源不可靠</li>
 </ul>
 </li>
-<li>CentOS yum源
+<li>CentOS yum 源
 <ul>
 <li><a href="http://mirror.centos.org/centos/7/">国外官方源</a></li>
 <li><a href="https://developer.aliyun.com/mirror/centos?spm=a2c6h.13651102.0.0.3e221b11hNsKC1">阿里云源配置指南</a></li>
 </ul>
 </li>
-<li>yum命令常用选项
+<li>yum 命令常用选项
 <ul>
 <li>install 安装软件包</li>
 <li>remove 卸载软件软件包</li>
@@ -970,7 +984,7 @@ net-tools VS iproute
 <li>update 升级软件包</li>
 </ul>
 </li>
-<li>yum install epel-release -y    // 安装epel仓库</li>
+<li>yum install epel-release -y // 安装 epel 仓库</li>
 </ul>
 </li>
 <li>源代码编译安装
@@ -981,9 +995,9 @@ net-tools VS iproute
 <li>wget &lt;下载地址&gt;</li>
 <li>tar -zxf &lt;ResourceCodeName.tgz&gt;</li>
 <li>cd ResourceCodeName/</li>
-<li>./configure &ndash;prefix=/usr/localResourceCodeName    // 匹配安装环境 &ndash;prefix指定安装目录</li>
-<li>yum install gcc gcc-g++ 若没有安装gcc gcc-g++</li>
-<li>make -j2 或gmake -j2(跨平台编译)    // 把源代码编译为可执行程序 -j2表示用两个逻辑内核参与编译</li>
+<li>./configure &ndash;prefix=/usr/localResourceCodeName // 匹配安装环境 &ndash;prefix 指定安装目录</li>
+<li>yum install gcc gcc-g++ 若没有安装 gcc gcc-g++</li>
+<li>make -j2 或 gmake -j2(跨平台编译) // 把源代码编译为可执行程序 -j2 表示用两个逻辑内核参与编译</li>
 <li>make install 把编译好的二进制文件安装到指定环境</li>
 <li>卸载的时候把软件的安装目录删除掉就可以了</li>
 </ul>
@@ -995,38 +1009,38 @@ net-tools VS iproute
 <li>rpm 格式内核
 <ul>
 <li>uname -r 查看内核版本</li>
-<li>yum install kernel    // 升级内核</li>
-<li>yum install kernel-x.xx.x    // 安装or升级指定内核版本</li>
+<li>yum install kernel // 升级内核</li>
+<li>yum install kernel-x.xx.x // 安装 or 升级指定内核版本</li>
 <li>yum update 升级内核及已安装的其他软件包和补丁</li>
-<li>yum install epel-release -y    // 安装epel仓库</li>
+<li>yum install epel-release -y // 安装 epel 仓库</li>
 </ul>
 </li>
 <li>源代码编译安装
 <ul>
-<li>编译安装内核要确保/分区有10g以上的容量,否则可能会出现安装失败的情况</li>
-<li>yum install gcc gcc-g++ make ncurses-devel openssl-devel elfutils-libelf-devel安装依赖包</li>
+<li>编译安装内核要确保/分区有 10g 以上的容量,否则可能会出现安装失败的情况</li>
+<li>yum install gcc gcc-g++ make ncurses-devel openssl-devel elfutils-libelf-devel 安装依赖包</li>
 <li><a href="https://www.kernel.org">下载内核</a></li>
 <li>tar -C /usr/src/kernels -Jxvf linux-x.xx.xx.tar.gz</li>
-<li>cd /usr/src/kernels/linux-x.xx.xx.tar.gz &amp;&amp; make menuconfig | allyesconfig | allnoconfig    // 配置内核编译参数 menuconfig:自己通过菜单配置 allyescondfig:自动配置都安装 allnoconfig 最小配置,可能连启动都启动不了</li>
-<li>cp /boot/config-kernelversion.platform /urs/src/kernels/linux-5.x.xx.xx/.config    // 使用当前系统内核配置</li>
-<li>lscpu 查看cpu</li>
-<li>make -j2 all    // 对所有的编译选项进行编译</li>
-<li>make modules_install &amp;&amp; make install    // 先自动安装内核支持的模块 然后再安装内核 并自动修改启动文件</li>
+<li>cd /usr/src/kernels/linux-x.xx.xx.tar.gz &amp;&amp; make menuconfig | allyesconfig | allnoconfig // 配置内核编译参数 menuconfig:自己通过菜单配置 allyescondfig:自动配置都安装 allnoconfig 最小配置,可能连启动都启动不了</li>
+<li>cp /boot/config-kernelversion.platform /urs/src/kernels/linux-5.x.xx.xx/.config // 使用当前系统内核配置</li>
+<li>lscpu 查看 cpu</li>
+<li>make -j2 all // 对所有的编译选项进行编译</li>
+<li>make modules_install &amp;&amp; make install // 先自动安装内核支持的模块 然后再安装内核 并自动修改启动文件</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>grub配置文件
+<li>grub 配置文件
 <ul>
 <li>/etc/default/grub
 <ul>
-<li>grub2-editenv list    // 列出系统默认启动的内核</li>
-<li>grep ^menu /boot/grub2/grub.cfg    // 列出所有内核的名称</li>
-<li>grub2-set-default &lt;行数&gt;    // 设置系统默认启动的内核</li>
-<li>/etc/default/grub中的GRUB_CMDLINE_LINUX添加的是linux内核引导的过程中对内核增加的参数
+<li>grub2-editenv list // 列出系统默认启动的内核</li>
+<li>grep ^menu /boot/grub2/grub.cfg // 列出所有内核的名称</li>
+<li>grub2-set-default &lt;行数&gt; // 设置系统默认启动的内核</li>
+<li>/etc/default/grub 中的 GRUB_CMDLINE_LINUX 添加的是 linux 内核引导的过程中对内核增加的参数
 <ul>
 <li>rhgb 图形界面</li>
-<li>quiet 静默模式 引导的时候只是打印必要的消息 如果我们发现启动异常的时候我们一般把quiet去掉 把rhgb和quiet去掉我们可以发现引导的时候系统打印更详细的消息</li>
+<li>quiet 静默模式 引导的时候只是打印必要的消息 如果我们发现启动异常的时候我们一般把 quiet 去掉 把 rhgb 和 quiet 去掉我们可以发现引导的时候系统打印更详细的消息</li>
 </ul>
 </li>
 </ul>
@@ -1034,32 +1048,33 @@ net-tools VS iproute
 <li>/etc/grub.d/</li>
 <li>/boot/grub2/grub.cfg</li>
 <li>/grub2-mkconfig -o /boot/grub2/grub.cfg</li>
-<li>忘记root密码的情况下修改root密码 做笔记比较耗时间 先放着 具体请参考 极客时间 Linux实战技能100讲 36|grub配置文件介绍 <a href="http://linux.vbird.org/linux_basic/0510osloader.php#solution_root">鸟哥的Linux私房菜参考</a></li>
+<li>忘记 root 密码的情况下修改 root 密码 做笔记比较耗时间 先放着 具体请参考 极客时间 Linux 实战技能 100 讲 36|grub 配置文件介绍 <a href="http://linux.vbird.org/linux_basic/0510osloader.php#solution_root">鸟哥的 Linux 私房菜参考</a></li>
 </ul>
 </li>
 </ul>
 <h3 id="进程管理">进程管理</h3>
 <ul>
-<li>进程的概念与进程查看
+<li>
+<p>进程的概念与进程查看</p>
 <ul>
 <li>进程&mdash;运行的程序，从程序开始运行到终止的整个生命周期是可管理的
 <ul>
 <li>守护进程已经完全脱离终端控制台了，而后台程序并未完全脱离终端，在终端未关闭前还是会往终端输出结果</li>
-<li>守护进程在关闭终端控制台时不会受影响，而后台程序会随用户退出而停止，需要在以nohup command &amp; 格式运行才能避免影响</li>
+<li>守护进程在关闭终端控制台时不会受影响，而后台程序会随用户退出而停止，需要在以 nohup command &amp; 格式运行才能避免影响</li>
 </ul>
 </li>
-<li>c程序的启动是从main函数开始的</li>
+<li>c 程序的启动是从 main 函数开始的</li>
 <li>终止的方式并不唯一， 分为正常终止和异常终止
 <ul>
-<li>正常终止也分为从main返回 调用exit等方式</li>
-<li>异常终止分为调用abort 接收信号等</li>
+<li>正常终止也分为从 main 返回 调用 exit 等方式</li>
+<li>异常终止分为调用 abort 接收信号等</li>
 </ul>
 </li>
 <li>进程也是树形结构</li>
 <li>进程和权限有着密不可分的关系</li>
-<li>ps              ps不带任何参数 列出当前终端执行的命令进程</li>
-<li>ps -e | more    1号进程是systemd 旧的linux 1号进程可能是init</li>
-<li>ps -ef | more   比ps -e 显示更多的消息 这里UID叫做有效用户id UID显示的不一定是启动进程的用户也有可能显示nobody 进程启动后UID可能发生更改  PPID：父进程 LWP：线程数 TTY表示控制终端，若显示为？则表示没有控制终端；TIME表示占用的CPU时间；CMD表示执行的命令</li>
+<li>ps ps 不带任何参数 列出当前终端执行的命令进程</li>
+<li>ps -e | more 1 号进程是 systemd 旧的 linux 1 号进程可能是 init</li>
+<li>ps -ef | more 比 ps -e 显示更多的消息 这里 UID 叫做有效用户 id UID 显示的不一定是启动进程的用户也有可能显示 nobody 进程启动后 UID 可能发生更改 PPID：父进程 LWP：线程数 TTY 表示控制终端，若显示为？则表示没有控制终端；TIME 表示占用的 CPU 时间；CMD 表示执行的命令</li>
 <li>pstree | more</li>
 <li>top
 <ul>
@@ -1069,34 +1084,34 @@ net-tools VS iproute
 <li>目前的时间</li>
 <li>开机到目前为止所经过的时间</li>
 <li>已经登入系统的使用者人数</li>
-<li>系统在1, 5, 15分钟的内的平均工作负载 越小代表系统越闲置，若高于1得要注意你的系统程序是否太过繁复了！</li>
+<li>系统在 1, 5, 15 分钟的内的平均工作负载 越小代表系统越闲置，若高于 1 得要注意你的系统程序是否太过繁复了！</li>
 </ul>
 </li>
-<li>第二行(Tasks&hellip;) 显示的是目前程序的总量与程序在各种状态(running, sleeping, stopped, zombie)的数量 比较需要注意的是最后的zombie 那个数值，如果不是0 ！好好看看到底是那个process 变成僵尸了吧？</li>
-<li>第三行(%Cpus&hellip;)：显示的是CPU 的整体负载，每个项目可使用? 查阅。(要特别注意的是wa 项目，那个项目代表的是I/O wait， 通常你的系统会变慢都是I/O 产生的问题比较大！因此这里得要注意这个项目耗用CPU 的资源喔！另外，如果是多核心的设备，可以按下数字键『1』来切换成不同CPU 的负载率。
+<li>第二行(Tasks&hellip;) 显示的是目前程序的总量与程序在各种状态(running, sleeping, stopped, zombie)的数量 比较需要注意的是最后的 zombie 那个数值，如果不是 0 ！好好看看到底是那个 process 变成僵尸了吧？</li>
+<li>第三行(%Cpus&hellip;)：显示的是 CPU 的整体负载，每个项目可使用? 查阅。(要特别注意的是 wa 项目，那个项目代表的是 I/O wait， 通常你的系统会变慢都是 I/O 产生的问题比较大！因此这里得要注意这个项目耗用 CPU 的资源喔！另外，如果是多核心的设备，可以按下数字键『1』来切换成不同 CPU 的负载率。
 <ul>
-<li>us user 表示用户态的CPU时间比例</li>
-<li>sy system 表示内核态的CPU时间比例</li>
-<li>ni nice 表示运行低优先级进程的CPU时间比例</li>
-<li>id idle 表示空闲CPU时间比例</li>
-<li>wa iowait 表示处于IO等待的CPU时间比例</li>
-<li>hi hard interrupt 表示处理硬中断的CPU时间比例</li>
-<li>si soft interrupt 表示处理软中断的CPU时间比例</li>
-<li>st steal 表示当前系统运行在虚拟机中的时候，被其他虚拟机占用的CPU时间比例。</li>
+<li>us user 表示用户态的 CPU 时间比例</li>
+<li>sy system 表示内核态的 CPU 时间比例</li>
+<li>ni nice 表示运行低优先级进程的 CPU 时间比例</li>
+<li>id idle 表示空闲 CPU 时间比例</li>
+<li>wa iowait 表示处于 IO 等待的 CPU 时间比例</li>
+<li>hi hard interrupt 表示处理硬中断的 CPU 时间比例</li>
+<li>si soft interrupt 表示处理软中断的 CPU 时间比例</li>
+<li>st steal 表示当前系统运行在虚拟机中的时候，被其他虚拟机占用的 CPU 时间比例。</li>
 </ul>
 </li>
-<li>第四行与第五行：表示目前的实体记忆体与虚拟记忆体(Mem/Swap) 的使用情况。再次重申，要注意的是swap 的使用量要尽量的少！如果swap 被用的很大量，表示系统的实体记忆体实在不足！</li>
-<li>第六行：这个是当在top 程式当中输入指令时，显示状态的地方。
-PID 进程ID</li>
+<li>第四行与第五行：表示目前的实体记忆体与虚拟记忆体(Mem/Swap) 的使用情况。再次重申，要注意的是 swap 的使用量要尽量的少！如果 swap 被用的很大量，表示系统的实体记忆体实在不足！</li>
+<li>第六行：这个是当在 top 程式当中输入指令时，显示状态的地方。
+PID 进程 ID</li>
 <li>第七行
 <ul>
-<li>USER 进程所有者的用户名，例如root</li>
+<li>USER 进程所有者的用户名，例如 root</li>
 <li>PR 进程调度优先级</li>
-<li>NI 进程nice值(优先级)，越小的值代表越高的优先级</li>
+<li>NI 进程 nice 值(优先级)，越小的值代表越高的优先级</li>
 <li>VIRT 进程使用的虚拟内存</li>
 <li>RES 进程使用的物理内存（不包括共享内存）</li>
 <li>SHR 进程使用的共享内存</li>
-<li>%CPU 进程使用的CPU占比</li>
+<li>%CPU 进程使用的 CPU 占比</li>
 <li>%MEM 进程使用的内存占比</li>
 <li>S 进程状态
 <ul>
@@ -1107,27 +1122,28 @@ PID 进程ID</li>
 <li>T 跟踪/停止 挂起状态 程序保存在内存中 作业处于暂停状态</li>
 </ul>
 </li>
-<li>TIME+ 进程启动后到现在所用的全部CPU时间</li>
-<li>COMMAND 进程的启动命令（默认只显示二进制，top -c能够显示命令行和启动参数）</li>
+<li>TIME+ 进程启动后到现在所用的全部 CPU 时间</li>
+<li>COMMAND 进程的启动命令（默认只显示二进制，top -c 能够显示命令行和启动参数）</li>
 </ul>
 </li>
-<li>预设更新程序资源的时间为3秒可以按s切换采集频率</li>
+<li>预设更新程序资源的时间为 3 秒可以按 s 切换采集频率</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>进程的控制命令
+<li>
+<p>进程的控制命令</p>
 <ul>
 <li>调整优先级别
 <ul>
-<li>nice范围从-20到19 值越小优先级越高 抢占资源就越多
+<li>nice 范围从-20 到 19 值越小优先级越高 抢占资源就越多
 <ul>
-<li>nice -n &lt;nice值&gt; &lt;可执行文件&gt;    // 将&lt;可执行文件&gt;的的优先值设置为&lt;nice值&gt;</li>
+<li>nice -n &lt;nice 值&gt; &lt;可执行文件&gt; // 将&lt;可执行文件&gt;的的优先值设置为&lt;nice 值&gt;</li>
 </ul>
 </li>
 <li>renice 重新设置优先级
 <ul>
-<li>renice -n &lt;nice值&gt; &lt;可执行文件&gt;    // // 将&lt;可执行文件&gt;的的优先值重新设置为&lt;nice值&gt;</li>
+<li>renice -n &lt;nice 值&gt; &lt;可执行文件&gt; // // 将&lt;可执行文件&gt;的的优先值重新设置为&lt;nice 值&gt;</li>
 </ul>
 </li>
 </ul>
@@ -1136,50 +1152,52 @@ PID 进程ID</li>
 <ul>
 <li>jobs
 <ul>
-<li>jobs -l    // 列出后台的工作状态 同时列出后台任务的pid</li>
-<li>jobs -r    // 仅列出正在后台run 的工作</li>
-<li>jobs -s    // 仅列出正在后台中暂停(stop) 的工作</li>
+<li>jobs -l // 列出后台的工作状态 同时列出后台任务的 pid</li>
+<li>jobs -r // 仅列出正在后台 run 的工作</li>
+<li>jobs -s // 仅列出正在后台中暂停(stop) 的工作</li>
 </ul>
 </li>
-<li>&amp; 符号    // 命令后加&amp; 把进程切换到后台</li>
+<li>&amp; 符号 // 命令后加&amp; 把进程切换到后台</li>
 <li>jobs 查看切换到后台的任务</li>
-<li>fg [job_spec &hellip;]    // 把任务切换到前台</li>
-<li>bg [job_spec &hellip;]    // 把任务切换到后台运行</li>
-<li>ctrl-z    // 把程序进行临时的挂起</li>
-<li>ctrl-c    // kill foreground process</li>
-<li>ctrl-d    // Terminate input, or exit shell 一个特殊的二进制值，表示 EOF，作用相当于在终端中输入exit后回车</li>
-<li>ctrl-/    发送 SIGQUIT 信号给前台进程组中的所有进程，终止前台进程并生成 core 文件</li>
-<li>ctrl-s    中断控制台输出</li>
-<li>ctrl-q    恢复控制台输出</li>
-<li>ctrl-l    清屏</li>
+<li>fg [job_spec &hellip;] // 把任务切换到前台</li>
+<li>bg [job_spec &hellip;] // 把任务切换到后台运行</li>
+<li>ctrl-z // 把程序进行临时的挂起</li>
+<li>ctrl-c // kill foreground process</li>
+<li>ctrl-d // Terminate input, or exit shell 一个特殊的二进制值，表示 EOF，作用相当于在终端中输入 exit 后回车</li>
+<li>ctrl-/ 发送 SIGQUIT 信号给前台进程组中的所有进程，终止前台进程并生成 core 文件</li>
+<li>ctrl-s 中断控制台输出</li>
+<li>ctrl-q 恢复控制台输出</li>
+<li>ctrl-l 清屏</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>进程的通信方式-信号
+<li>
+<p>进程的通信方式-信号</p>
 <ul>
 <li>信号是进程间通信方式之一,典型用法是: 终端用户输入中断命令,通过信号机制停止一个程序的运行。</li>
 <li>使用信号的常用快捷键和命令</li>
-<li>kill -l    // 列出所有支持的信号
+<li>kill -l // 列出所有支持的信号
 <ul>
-<li>ctrl-c    // SIGINT 通知前台进程组终止进程</li>
-<li>kill -15 <!-- raw HTML omitted -->    // SIGTERM 执行kill（不加 -* 默认kill -15）命令,系统会发送一个SIGTERM信号给对应的程序,当程序接收到该signal信号后,将会发生以下事情：1.程序立刻停止  2.当程序释放相应资源后再停止 3.程序可能仍然继续运行 大部分程序接收到SIGTERM信号后，会先释放自己的资源，然后再停止。但是也有程序可能接收信号后，做一些其他的事情（如果程序正在等待IO，可能就不会立马做出响应，我在使用wkhtmltopdf转pdf的项目中遇到这现象），也就是说，SIGTERM多半是会被阻塞的。</li>
-<li>kill -9 <!-- raw HTML omitted -->    // SIGKILL即exit exit信号不会被系统阻塞 所以能立即结束程序,不能被阻塞和处理 最好别使用 不要使用kill -9  它没有给进程留下善后的机会：1.关闭socket链接 2.清理临时文件 3.将自己将要被销毁的消息通知给子进程 4.重置自己的终止状态</li>
+<li>ctrl-c // SIGINT 通知前台进程组终止进程</li>
+<li>kill -15 <!-- raw HTML omitted --> // SIGTERM 执行 kill（不加 -* 默认 kill -15）命令,系统会发送一个 SIGTERM 信号给对应的程序,当程序接收到该 signal 信号后,将会发生以下事情：1.程序立刻停止 2.当程序释放相应资源后再停止 3.程序可能仍然继续运行 大部分程序接收到 SIGTERM 信号后，会先释放自己的资源，然后再停止。但是也有程序可能接收信号后，做一些其他的事情（如果程序正在等待 IO，可能就不会立马做出响应，我在使用 wkhtmltopdf 转 pdf 的项目中遇到这现象），也就是说，SIGTERM 多半是会被阻塞的。</li>
+<li>kill -9 <!-- raw HTML omitted --> // SIGKILL 即 exit exit 信号不会被系统阻塞 所以能立即结束程序,不能被阻塞和处理 最好别使用 不要使用 kill -9 它没有给进程留下善后的机会：1.关闭 socket 链接 2.清理临时文件 3.将自己将要被销毁的消息通知给子进程 4.重置自己的终止状态</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>守护进程和系统日志
+<li>
+<p>守护进程和系统日志</p>
 <ul>
 <li>
-<p>使用nohub与&amp;符号配合运行一个命令</p>
+<p>使用 nohub 与&amp;符号配合运行一个命令</p>
 <ul>
-<li>nohub命令使进程忽略hangup(挂起)信号 即使终端关掉 进程依旧可以运行 忽略输入并把输出追加到&quot;nohub.out&rdquo; 终端关掉后父进程关闭 该进程变为孤儿进程 所以父进程PPID变为1
+<li>nohub 命令使进程忽略 hangup(挂起)信号 即使终端关掉 进程依旧可以运行 忽略输入并把输出追加到&quot;nohub.out&rdquo; 终端关掉后父进程关闭 该进程变为孤儿进程 所以父进程 PPID 变为 1
 <ul>
 <li>nohub tail -f /var/log/messages</li>
-<li>cd /proc/<!-- raw HTML omitted --> &amp;&amp; ls    // 列出的目录就是文件的属性</li>
-<li>ls /proc/<!-- raw HTML omitted -->/cwd    // 当前所在的位置</li>
-<li>ls /proc/<!-- raw HTML omitted -->/fd    // 输出的存放位置
+<li>cd /proc/<!-- raw HTML omitted --> &amp;&amp; ls // 列出的目录就是文件的属性</li>
+<li>ls /proc/<!-- raw HTML omitted -->/cwd // 当前所在的位置</li>
+<li>ls /proc/<!-- raw HTML omitted -->/fd // 输出的存放位置
 <ul>
 <li>0 表示标准输入</li>
 <li>1 和 2 表示标准输出</li>
@@ -1192,88 +1210,89 @@ PID 进程ID</li>
 <li>
 <p>守护进程(daemon)和一般进程有什么区别？</p>
 <ul>
-<li>cd /proc/<!-- raw HTML omitted --> &amp;&amp; ls    // 列出的目录就是文件的属性</li>
-<li>ls /proc/<!-- raw HTML omitted -->/cwd    // 当前所在的位置 nohub是用户主目录 daemon是/(根目录)</li>
-<li>ls /proc/<!-- raw HTML omitted -->/fd    // 输出的存放位置 nohub和daemon输出的位置不一样 nohub输出到nohub.out中 daemon通过socket输出到系统日志程序然后打印到/var/log/ <!-- raw HTML omitted -->服务对应的日志文件中
+<li>cd /proc/<!-- raw HTML omitted --> &amp;&amp; ls // 列出的目录就是文件的属性</li>
+<li>ls /proc/<!-- raw HTML omitted -->/cwd // 当前所在的位置 nohub 是用户主目录 daemon 是/(根目录)</li>
+<li>ls /proc/<!-- raw HTML omitted -->/fd // 输出的存放位置 nohub 和 daemon 输出的位置不一样 nohub 输出到 nohub.out 中 daemon 通过 socket 输出到系统日志程序然后打印到/var/log/ <!-- raw HTML omitted -->服务对应的日志文件中
 <ul>
 <li>0 表示标准输入</li>
-<li>1 和 2 表示标准输出    // nohub输出到nohub中  daemon通过socket输出到系统日志程序然后打印到/var/log/ <!-- raw HTML omitted -->服务对应的日志文件中</li>
+<li>1 和 2 表示标准输出 // nohub 输出到 nohub 中 daemon 通过 socket 输出到系统日志程序然后打印到/var/log/ <!-- raw HTML omitted -->服务对应的日志文件中</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<p>使用screen命令</p>
+<p>使用 screen 命令</p>
 <ul>
-<li>screen进入screen环境    // 进入screen后即使网络断开了依旧还是可以保留工作现场,待下次重新连接后可以恢复工作现场,规避因网络中断造成的网络异常</li>
-<li>ctrl+a d 退出(detached)screen环境</li>
-<li>screen -ls 查看screen的会话</li>
+<li>screen 进入 screen 环境 // 进入 screen 后即使网络断开了依旧还是可以保留工作现场,待下次重新连接后可以恢复工作现场,规避因网络中断造成的网络异常</li>
+<li>ctrl+a d 退出(detached)screen 环境</li>
+<li>screen -ls 查看 screen 的会话</li>
 <li>screen -r <!-- raw HTML omitted --> 恢复会话</li>
-<li>exit 退出screen环境</li>
+<li>exit 退出 screen 环境</li>
 </ul>
 </li>
 <li>
 <p>系统日志</p>
 <ul>
-<li>cd /var/log &amp;&amp; ll    // 系统日志 系统运行的状态会打印到这些日志文件中</li>
-<li>tail -f ./message    // 系统常规日志 系统出现的一系列异常message 都会打印到message里 所以server 中message出现了内容 我们需要进行及时的处理</li>
-<li>tail -f ./dmesg    // dmesg 是内核运行的相关信息 一般是内核启动过程中打印进来的</li>
-<li>tail -f ./secure    // 系统的安全日志信息</li>
-<li>tail -f ./cron    // 系统执行周期性计划任务的一些日志信息</li>
+<li>cd /var/log &amp;&amp; ll // 系统日志 系统运行的状态会打印到这些日志文件中</li>
+<li>tail -f ./message // 系统常规日志 系统出现的一系列异常 message 都会打印到 message 里 所以 server 中 message 出现了内容 我们需要进行及时的处理</li>
+<li>tail -f ./dmesg // dmesg 是内核运行的相关信息 一般是内核启动过程中打印进来的</li>
+<li>tail -f ./secure // 系统的安全日志信息</li>
+<li>tail -f ./cron // 系统执行周期性计划任务的一些日志信息</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>服务管理工具systemctl
+<li>
+<p>服务管理工具 systemctl</p>
 <ul>
 <li>服务(提供常见功能的守护进程)集中管理工具
 <ul>
-<li>service     // 优点: 执行起来比较简单 缺点: 每一个包括star|stop|restart都需要自己来编写脚本来实现 服务控制的好坏完全由编写star|stop|restart脚本的人来控制
+<li>service // 优点: 执行起来比较简单 缺点: 每一个包括 star|stop|restart 都需要自己来编写脚本来实现 服务控制的好坏完全由编写 star|stop|restart 脚本的人来控制
 <ul>
 <li>cd /etc/init.d/ &amp;&amp; ll</li>
 <li>服务级别
 <ul>
-<li>init 0    // 关机 1号进程init不能被kill -9 关闭 常用</li>
-<li>init 1    // 单用户 只允许root用户对系统进行维护</li>
-<li>init 2    // Multi-user mode without network services started 不带网络的多用户模式</li>
-<li>init 3    // Multi-user mode with network services started 最常用的字符模式 多用户</li>
-<li>init 4    // 系统未使用，保留</li>
-<li>init 5    // 多用户GUI模式</li>
-<li>init 6    // 重启 常用</li>
+<li>init 0 // 关机 1 号进程 init 不能被 kill -9 关闭 常用</li>
+<li>init 1 // 单用户 只允许 root 用户对系统进行维护</li>
+<li>init 2 // Multi-user mode without network services started 不带网络的多用户模式</li>
+<li>init 3 // Multi-user mode with network services started 最常用的字符模式 多用户</li>
+<li>init 4 // 系统未使用，保留</li>
+<li>init 5 // 多用户 GUI 模式</li>
+<li>init 6 // 重启 常用</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>sytemctl    // service的强化
+<li>sytemctl // service 的强化
 <ul>
 <li>cd /usr/lib/systemd/system/ &amp;&amp; ll
 <ul>
-<li>ExecStart    // start</li>
-<li>Restart    // restart</li>
+<li>ExecStart // start</li>
+<li>Restart // restart</li>
 </ul>
 </li>
 <li>systemctl list-dependencies [target]</li>
-<li>sytemctl常见操作
+<li>sytemctl 常见操作
 <ul>
 <li>systemctl start|stop|restart|reload|enable|disable <!-- raw HTML omitted -->
 <ul>
-<li>start    // 开启服务</li>
-<li>stop    // 关闭服务</li>
-<li>restart    // 把服务停掉再重启</li>
-<li>reload    // 服务不停 只从加载配置文件</li>
-<li>enable    // 开机自启动</li>
-<li>disable    // 禁止开机自启</li>
+<li>start // 开启服务</li>
+<li>stop // 关闭服务</li>
+<li>restart // 把服务停掉再重启</li>
+<li>reload // 服务不停 只从加载配置文件</li>
+<li>enable // 开机自启动</li>
+<li>disable // 禁止开机自启</li>
 </ul>
 </li>
-<li>systemctl status <!-- raw HTML omitted -->    // 查看<!-- raw HTML omitted -->的服务状态</li>
-<li>systemctl list-unit-files // 查看Service是否开机自启</li>
+<li>systemctl status <!-- raw HTML omitted --> // 查看<!-- raw HTML omitted -->的服务状态</li>
+<li>systemctl list-unit-files // 查看 Service 是否开机自启</li>
 <li>软件包安装的服务单元 /usr/lib/systemd/system/</li>
 <li>服务级别
 <ul>
-<li>systemctl get-default    // 系统当前服务级别</li>
-<li>systemctl set-default <!-- raw HTML omitted -->   // 改变服务级别 下次启动时生效</li>
-<li>服务启动的顺序问题 在[Unit] After中修改 并加上Requires</li>
-<li>[Install] 在哪一个target会被默认引导</li>
+<li>systemctl get-default // 系统当前服务级别</li>
+<li>systemctl set-default <!-- raw HTML omitted --> // 改变服务级别 下次启动时生效</li>
+<li>服务启动的顺序问题 在[Unit] After 中修改 并加上 Requires</li>
+<li>[Install] 在哪一个 target 会被默认引导</li>
 <li>cd /usr/lib/systemd/system &amp;&amp; ll</li>
 <li>ll *.target</li>
 <li>ll runlevel*.target</li>
@@ -1287,20 +1306,21 @@ PID 进程ID</li>
 </li>
 </ul>
 </li>
-<li>selinux简介        // 安全性高但是会影响性能 所以生成环境上selinux大部分情况下都是关闭的
+<li>
+<p>selinux 简介 // 安全性高但是会影响性能 所以生成环境上 selinux 大部分情况下都是关闭的</p>
 <ul>
-<li>MAC(强制访问控制)与DAC(自主访问控制)</li>
-<li>查看SELinux的命令
+<li>MAC(强制访问控制)与 DAC(自主访问控制)</li>
+<li>查看 SELinux 的命令
 <ul>
 <li>getenforce</li>
-<li>vim /etc/selinux/config    // 修改后需要重启</li>
+<li>vim /etc/selinux/config // 修改后需要重启</li>
 <li>/usr/sbin/sestatus</li>
-<li>ps -Z and ls -Z and id -Z    // 查看具体的标签</li>
+<li>ps -Z and ls -Z and id -Z // 查看具体的标签</li>
 </ul>
 </li>
-<li>关闭SELinux
+<li>关闭 SELinux
 <ul>
-<li>setenforce 0    // 将Enforcing临时的改变为Permissive 重启后恢复为Enforcing</li>
+<li>setenforce 0 // 将 Enforcing 临时的改变为 Permissive 重启后恢复为 Enforcing</li>
 <li>/etc/selinux/sysconfig</li>
 </ul>
 </li>
@@ -1315,9 +1335,9 @@ PID 进程ID</li>
 <ul>
 <li>free
 <ul>
-<li>free -h    // show human-readable output</li>
-<li>free -m    // 以MiB的形式显示</li>
-<li>free -g    // 以GiB的形式显示 取整</li>
+<li>free -h // show human-readable output</li>
+<li>free -m // 以 MiB 的形式显示</li>
+<li>free -g // 以 GiB 的形式显示 取整</li>
 </ul>
 </li>
 <li>top</li>
@@ -1325,12 +1345,12 @@ PID 进程ID</li>
 </li>
 <li>磁盘使用率查看
 <ul>
-<li>ll /dev/sd?    // 查看磁盘,第5 第6字段分别用来表示磁盘的主设备号和从设备号 主设备号用来表示磁盘用什么样的驱动程序 从设备号用来确定访问什么样的地址</li>
-<li>ll /dev/sd??    // 如果磁盘有分区的话查看磁盘及分区</li>
+<li>ll /dev/sd? // 查看磁盘,第 5 第 6 字段分别用来表示磁盘的主设备号和从设备号 主设备号用来表示磁盘用什么样的驱动程序 从设备号用来确定访问什么样的地址</li>
+<li>ll /dev/sd?? // 如果磁盘有分区的话查看磁盘及分区</li>
 <li>fdisk
 <ul>
 <li>fdisk -l 查看磁盘信息</li>
-<li>parted -l 和fdisk -l 差不多</li>
+<li>parted -l 和 fdisk -l 差不多</li>
 </ul>
 </li>
 <li>df
@@ -1339,27 +1359,27 @@ PID 进程ID</li>
 </ul>
 </li>
 <li>du</li>
-<li>du与ls的区别    // du列出实际占用大小 ls列出的是文件大小 du统计的是数据块里面的信息 ls统计的是i节点里面的信息</li>
-<li>dd if=<!-- raw HTML omitted --> bs=4M count=10 seek=20 of=<!-- raw HTML omitted -->    // 先创建一个bfile的文件 按照4M为一个块 然后跳过20块 拷贝10次</li>
-<li>dd if=/dev/zero bs=4M count=10 seek=20 of=<!-- raw HTML omitted -->    // 先创建一个bfile的文件 按照4M为一个块 然后跳过20块 拷贝10次    // 用于Linux上磁盘的虚拟化</li>
+<li>du 与 ls 的区别 // du 列出实际占用大小 ls 列出的是文件大小 du 统计的是数据块里面的信息 ls 统计的是 i 节点里面的信息</li>
+<li>dd if=<!-- raw HTML omitted --> bs=4M count=10 seek=20 of=<!-- raw HTML omitted --> // 先创建一个 bfile 的文件 按照 4M 为一个块 然后跳过 20 块 拷贝 10 次</li>
+<li>dd if=/dev/zero bs=4M count=10 seek=20 of=<!-- raw HTML omitted --> // 先创建一个 bfile 的文件 按照 4M 为一个块 然后跳过 20 块 拷贝 10 次 // 用于 Linux 上磁盘的虚拟化</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>ext4文件系统
+<li>ext4 文件系统
 <ul>
-<li>Linux支持多种文件系统,常见的有
+<li>Linux 支持多种文件系统,常见的有
 <ul>
-<li>ext4    // ext4文件系统基本结构比较复杂
+<li>ext4 // ext4 文件系统基本结构比较复杂
 <ul>
-<li>超级块    // 位于文件系统最开头的位置 记录了文件系统中包含了多少个文件</li>
-<li>超级副本    // 不只一个备份</li>
-<li>i节点(inode)    // 记录每一个文件的名称 大小 编号 权限等信息 每个文件的文件名没有记录在自己的i节点上 记录在该文件父目录的DataBlock节点上</li>
-<li>数据块(datablock)    // 记录数据</li>
+<li>超级块 // 位于文件系统最开头的位置 记录了文件系统中包含了多少个文件</li>
+<li>超级副本 // 不只一个备份</li>
+<li>i 节点(inode) // 记录每一个文件的名称 大小 编号 权限等信息 每个文件的文件名没有记录在自己的 i 节点上 记录在该文件父目录的 DataBlock 节点上</li>
+<li>数据块(datablock) // 记录数据</li>
 <li>cp</li>
 <li>mv 如果只是改名的话 数据块节点不变 只有父目录节点上的文件名发生改变 如果是移动到别的目录若移动到其他分区则数据块节点会变化,花费时间较长,若移动到本分区内,也是瞬间完成的,数据块节点不发生改变</li>
-<li>echo &ldquo;Content&rdquo; &gt; <!-- raw HTML omitted --> and echo &ldquo;Content&rdquo; &raquo; <!-- raw HTML omitted -->   // echo对文件进行写入的时候 i节点不会发生改变 用vim对文件写入的时候 i节点会发生改变, &gt;为覆盖写入 &raquo;为追加写入</li>
-<li>rm // 实际就是让文件名与i节点的链接断开 这样做的好处是不管删除多大的文件所需时间都是一样的 也方便找回数据</li>
+<li>echo &ldquo;Content&rdquo; &gt; <!-- raw HTML omitted --> and echo &ldquo;Content&rdquo; &raquo; <!-- raw HTML omitted --> // echo 对文件进行写入的时候 i 节点不会发生改变 用 vim 对文件写入的时候 i 节点会发生改变, &gt;为覆盖写入 &raquo;为追加写入</li>
+<li>rm // 实际就是让文件名与 i 节点的链接断开 这样做的好处是不管删除多大的文件所需时间都是一样的 也方便找回数据</li>
 <li>硬链接不能跨越分区 软链接(符号链接)可以跨越分区</li>
 <li>facl 文件访问控制列表
 <ul>
@@ -1368,7 +1388,7 @@ PID 进程ID</li>
 <ul>
 <li>setfacl -m u:<!-- raw HTML omitted -->:&lt;r|w|x&gt; <!-- raw HTML omitted --></li>
 <li>serfacl -m g:<!-- raw HTML omitted -->:&lt;r|w|x&gt; <!-- raw HTML omitted --></li>
-<li>在rules前加一个d:，以表示指定一个目录</li>
+<li>在 rules 前加一个 d:，以表示指定一个目录</li>
 </ul>
 </li>
 <li>setfacl -x 回收文件访问权限
@@ -1389,26 +1409,26 @@ PID 进程ID</li>
 </li>
 <li>磁盘配额的使用
 <ul>
-<li>xfs文件系统的用户磁盘配额 quota</li>
+<li>xfs 文件系统的用户磁盘配额 quota</li>
 <li>mkfs.xfs &lt;/dev/PartitionName&gt;</li>
 <li>mkdir &lt;/mnt/PartitonName&gt;</li>
-<li>mount -o uquota,guota &lt;/dev/PartitionName&gt; &lt;/mnt/PartitionName&gt;    // uquota:用户磁盘配额    gquota:组磁盘配额</li>
+<li>mount -o uquota,guota &lt;/dev/PartitionName&gt; &lt;/mnt/PartitionName&gt; // uquota:用户磁盘配额 gquota:组磁盘配额</li>
 <li>mount 查看挂载情况</li>
 <li>vim /etc/fstab</li>
 <li>chmod 1777 &lt;/mnt/PartitonName&gt;</li>
 <li>xfs_quota -x -c &lsquo;report -gibh&rsquo; &lt;/mnt/PartitonName&gt;</li>
-<li>xfs_quota -x -c &lsquo;limit -u isoft=5 ihard=10 <!-- raw HTML omitted -->&rsquo; &lt;/mnt/PartitonName&gt;    // 对i节点进行限制 软限制:在限定时间内允许超过一定的值 硬限制:不允许超过</li>
-<li>xfs_quota -x -c &lsquo;limit -u bsoft=5 bhard=10 <!-- raw HTML omitted -->&rsquo; &lt;/mnt/PartitonName&gt;    // 对数据块进行限制 软限制:在限定时间内允许超过一定的值 硬限制:不允许超过</li>
+<li>xfs_quota -x -c &lsquo;limit -u isoft=5 ihard=10 <!-- raw HTML omitted -->&rsquo; &lt;/mnt/PartitonName&gt; // 对 i 节点进行限制 软限制:在限定时间内允许超过一定的值 硬限制:不允许超过</li>
+<li>xfs_quota -x -c &lsquo;limit -u bsoft=5 bhard=10 <!-- raw HTML omitted -->&rsquo; &lt;/mnt/PartitonName&gt; // 对数据块进行限制 软限制:在限定时间内允许超过一定的值 硬限制:不允许超过</li>
 </ul>
 </li>
 <li>磁盘的分区与挂载
 <ul>
-<li>常用命令    // 保存在内存中 需要修改配置文件固化
+<li>常用命令 // 保存在内存中 需要修改配置文件固化
 <ul>
-<li>fdisk + &lt;/dev/deviceName&gt;    // 输入q退出不保存    最后一步输入w 保存并退出</li>
+<li>fdisk + &lt;/dev/deviceName&gt; // 输入 q 退出不保存 最后一步输入 w 保存并退出</li>
 <li>mkfs&lt;文件系统类型&gt; + &lt;/dev/DeviceName&gt;</li>
-<li>parted + &lt;/dev/DeviceName&gt;   // 硬盘大于2T则不能用fdisk进行分区,得用parted</li>
-<li>mount &lt;可选: -t ext4 或 auto&gt; &lt;分区 /dev/PartitionName&gt; &lt;/mnt/PartitionName&gt;    // 将&lt;分区 /dev/PartitionName&gt;挂载到&lt;/mnt/PartitionName&gt;</li>
+<li>parted + &lt;/dev/DeviceName&gt; // 硬盘大于 2T 则不能用 fdisk 进行分区,得用 parted</li>
+<li>mount &lt;可选: -t ext4 或 auto&gt; &lt;分区 /dev/PartitionName&gt; &lt;/mnt/PartitionName&gt; // 将&lt;分区 /dev/PartitionName&gt;挂载到&lt;/mnt/PartitionName&gt;</li>
 </ul>
 </li>
 <li>常用配置文件
@@ -1416,7 +1436,7 @@ PID 进程ID</li>
 <li>/etc/fstab
 <ul>
 <li>vim /etc/fstab</li>
-<li>添加 &lt;/dev/PartitionName&gt;    &lt;/mnt/PartitionName&gt;    ext4    defaults    0    0    // 保存后退出,以后系统开机后该分区就可以自动进行挂载了</li>
+<li>添加 &lt;/dev/PartitionName&gt; &lt;/mnt/PartitionName&gt; ext4 defaults 0 0 // 保存后退出,以后系统开机后该分区就可以自动进行挂载了</li>
 </ul>
 </li>
 </ul>
@@ -1424,22 +1444,22 @@ PID 进程ID</li>
 </ul>
 </li>
 <li>交换分区(虚拟内存)的查看与创建</li>
-<li>软件RAID的使用
+<li>软件 RAID 的使用
 <ul>
-<li>RAID的常见级别及含义
+<li>RAID 的常见级别及含义
 <ul>
 <li>RAID 0 striping 条带方式, 提高单盘吞吐率</li>
 <li>RAID 1 mirroning 镜像方式, 提高可靠性</li>
 <li>RAID 5 有奇偶校验</li>
 <li>RAID 10 是 RAID 1 与 RAID 0 的结合</li>
-<li>mdadm -C &lt;/dev/RaidDeviceName&gt; -a yes -l1 -n2 &lt;/dev/DeviceName1&gt; &lt;/dev/DeviceName2&gt;    // -a 表示同意创建设备, -l 表示raid的级别, -n 表示活动的硬盘, &lt;/dev/DeviceName1&gt; &lt;/dev/DeviceName2&gt;也可用通配符写法 e.g. /dev/sd[b, c]1</li>
+<li>mdadm -C &lt;/dev/RaidDeviceName&gt; -a yes -l1 -n2 &lt;/dev/DeviceName1&gt; &lt;/dev/DeviceName2&gt; // -a 表示同意创建设备, -l 表示 raid 的级别, -n 表示活动的硬盘, &lt;/dev/DeviceName1&gt; &lt;/dev/DeviceName2&gt;也可用通配符写法 e.g. /dev/sd[b, c]1</li>
 <li>mdadm -D &lt;/dev/RaidDeviceName&gt;</li>
-<li>dd if=/dev/zero of=&lt;/dev/DeviceName1&gt; bs=4M count=1    // 破坏 &lt;/dev/DeviceName1&gt; 同时Raid也会被破坏 可以通过软件mdadm 或可以直接更换硬盘 因为支持热拔插</li>
-<li>echo DEVICE /dev/sdp[b, c]1 &raquo; /etc/mdadm.conf    // 这样开机的时候软件才会被自动被加载</li>
-<li>mdadm -Evs &raquo; /etc/mdadm.conf    // 把raid的属性追加到/etc/mdadm.conf 这样开机的时候软件才会被自动被加载</li>
-<li>mdadm.xfs &lt;/dev/RaidDeviceName1&gt;    // 格式化</li>
-<li>mdadm &ndash;stop &lt;/dev/RaidDeviceName&gt;    // 关闭raid</li>
-<li>dd if=/dev/zero of=&lt;/dev/DeviceName1&gt; bs=1M count=1    // 破坏超级块</li>
+<li>dd if=/dev/zero of=&lt;/dev/DeviceName1&gt; bs=4M count=1 // 破坏 &lt;/dev/DeviceName1&gt; 同时 Raid 也会被破坏 可以通过软件 mdadm 或可以直接更换硬盘 因为支持热拔插</li>
+<li>echo DEVICE /dev/sdp[b, c]1 &raquo; /etc/mdadm.conf // 这样开机的时候软件才会被自动被加载</li>
+<li>mdadm -Evs &raquo; /etc/mdadm.conf // 把 raid 的属性追加到/etc/mdadm.conf 这样开机的时候软件才会被自动被加载</li>
+<li>mdadm.xfs &lt;/dev/RaidDeviceName1&gt; // 格式化</li>
+<li>mdadm &ndash;stop &lt;/dev/RaidDeviceName&gt; // 关闭 raid</li>
+<li>dd if=/dev/zero of=&lt;/dev/DeviceName1&gt; bs=1M count=1 // 破坏超级块</li>
 </ul>
 </li>
 </ul>
@@ -1447,53 +1467,53 @@ PID 进程ID</li>
 <li>逻辑卷管理
 <ul>
 <li>逻辑卷和文件系统的关系</li>
-<li>为Linux创建逻辑卷
+<li>为 Linux 创建逻辑卷
 <ul>
 <li>pvcreate &lt;/dev/DeviceName1&gt; &lt;/dev/DeviceName2&gt; &lt;/dev/DeviceName3&gt; 或 pvcreate &lt;/dev/sd[b, c, d]1&gt;</li>
-<li>pvs    // 查看物理卷    PV:物理卷    VG:卷组</li>
-<li>vgcreate <!-- raw HTML omitted --> &lt;/dev/DeviceName&gt;    // 一个PV不能加入到两个卷组</li>
-<li>vgs    // 查看卷组</li>
-<li>lvcreate -L &lt;逻辑卷大小&gt; -n &lt;/dev/lvmName&gt; <!-- raw HTML omitted -->    // 创建逻辑卷大小</li>
+<li>pvs // 查看物理卷 PV:物理卷 VG:卷组</li>
+<li>vgcreate <!-- raw HTML omitted --> &lt;/dev/DeviceName&gt; // 一个 PV 不能加入到两个卷组</li>
+<li>vgs // 查看卷组</li>
+<li>lvcreate -L &lt;逻辑卷大小&gt; -n &lt;/dev/lvmName&gt; <!-- raw HTML omitted --> // 创建逻辑卷大小</li>
 <li>mkfs.xfs &lt;/dev/lvmGroupName/lvmName&gt;</li>
 <li>mount</li>
 </ul>
 </li>
 <li>动态扩容逻辑卷
 <ul>
-<li>lvs 或 mount    // 查看/root 及/ 在哪个分区</li>
-<li>mount | grep root    // 查看root在哪个分区</li>
+<li>lvs 或 mount // 查看/root 及/ 在哪个分区</li>
+<li>mount | grep root // 查看 root 在哪个分区</li>
 <li>vgextend <!-- raw HTML omitted --> &lt;/dev/DeviceName&gt;</li>
 <li>lvmextend -L +&lt;扩充的大小&gt; &lt;/dev/lvmGroupName/lvmName&gt;</li>
-<li>xfs_growfs &lt;/dev/lvmGroupName/lvmName&gt;    // 文件系统同步更新扩充后的逻辑卷容量大小</li>
+<li>xfs_growfs &lt;/dev/lvmGroupName/lvmName&gt; // 文件系统同步更新扩充后的逻辑卷容量大小</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>系统综合状态查看
 <ul>
-<li>使用sar命令查看系统综合状态
+<li>使用 sar 命令查看系统综合状态
 <ul>
-<li>sar -u &lt;时间间隔&gt; &lt;采样次数&gt;        // 查看cpu运行情况</li>
-<li>sar -r &lt;时间间隔&gt; &lt;采样次数&gt;        // 查看内存读写情况</li>
-<li>sar -d &lt;时间间隔&gt; &lt;采样次数&gt;        // 查看磁盘读写情况</li>
-<li>sar -p &lt;时间间隔&gt; &lt;采样次数&gt;        // 查看进程情况</li>
+<li>sar -u &lt;时间间隔&gt; &lt;采样次数&gt; // 查看 cpu 运行情况</li>
+<li>sar -r &lt;时间间隔&gt; &lt;采样次数&gt; // 查看内存读写情况</li>
+<li>sar -d &lt;时间间隔&gt; &lt;采样次数&gt; // 查看磁盘读写情况</li>
+<li>sar -p &lt;时间间隔&gt; &lt;采样次数&gt; // 查看进程情况</li>
 </ul>
 </li>
 <li>使用第三方命令查看网络流量
 <ul>
 <li>yum install epel-release</li>
 <li>yum install iftop</li>
-<li>iftop -P    // 观察网络情况 默认观察eth0的网络</li>
+<li>iftop -P // 观察网络情况 默认观察 eth0 的网络</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <h3 id="bash">Bash</h3>
-<p>bash ./filename.sh    // 不会改变当前工作环境 退出后即恢复 用子进程方式
-./filename.sh    // 不会改变当前工作环境 退出后即恢复 用子进程方式
-source ./filename.sh    // 会改变当前工作环境
-. filename.sh    // 会改变当前工作环境</p>
+<p>bash ./filename.sh // 不会改变当前工作环境 退出后即恢复 用子进程方式
+./filename.sh // 不会改变当前工作环境 退出后即恢复 用子进程方式
+source ./filename.sh // 会改变当前工作环境
+. filename.sh // 会改变当前工作环境</p>
 <h3 id="打开终端环境变量加载过程">打开终端环境变量加载过程</h3>
 <ul>
 <li>su - <!-- raw HTML omitted -->
@@ -1511,7 +1531,7 @@ source ./filename.sh    // 会改变当前工作环境
 </ol>
 </li>
 </ul>
-<h3 id="java环境变量设置参考">Java环境变量设置(参考)</h3>
+<h3 id="java-环境变量设置参考">Java 环境变量设置(参考)</h3>
 <p>export JAVA_HOME=/usr/lib/jvm/jdk
 export J2SDKDIR=/usr/lib/jvm/jdk
 export DERBY_HOME=/usr/lib/jvm/jdk/db
@@ -1525,17 +1545,17 @@ export PATH=$PATH:DERBY_HOME</p>
 <li>软件防火墙和硬件防火墙</li>
 <li>包过滤防火墙和应用层防火墙
 <ul>
-<li>CentOS 6 默认的防火墙是iptables</li>
-<li>CentOS 7 默认的防火墙firewallD(底层使用netfilter)</li>
+<li>CentOS 6 默认的防火墙是 iptables</li>
+<li>CentOS 7 默认的防火墙 firewallD(底层使用 netfilter)</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>iptables的表和链</li>
-<li>iptables的fiter表</li>
-<li>iptables的nat表</li>
-<li>ipatables配置文件</li>
-<li>firewallD服务</li>
+<li>iptables 的表和链</li>
+<li>iptables 的 fiter 表</li>
+<li>iptables 的 nat 表</li>
+<li>ipatables 配置文件</li>
+<li>firewallD 服务</li>
 </ul>
 <h3 id="ssh">ssh</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa

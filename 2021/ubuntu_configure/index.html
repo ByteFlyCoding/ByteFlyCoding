@@ -55,7 +55,7 @@
     "datePublished": "2021-03-31 19:45:02 \u002b0800 CST",
     "dateModified" : "2021-03-31 19:45:02 \u002b0800 CST",
     "url" : "https:\/\/ByteFlyCoding.github.io\/2021\/ubuntu_configure\/",
-    "wordCount" : "696",
+    "wordCount" : "791",
     "keywords" : [ "Linux", "ZhangJincheng\u0027s Blogs"]
 }
 </script>
@@ -152,7 +152,7 @@
                         <a href="https://ByteFlyCoding.github.io/categories/linux/"> Linux </a>
                         
                 </span>
-                <span class="post-word-count">, 696 words</span>
+                <span class="post-word-count">, 791 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -230,7 +230,7 @@ sudo apt install fcitx
 <p>感觉自己的下载的文件有问题，找个时间重新下一遍并且写一下文档</p>
 <p><a href="http://www.ahutcloud.cn/212/#toc-head-13">Ubuntu 20.04 安装记录以及配置与美化参考链接</a></p>
 <p><a href="https://blog.csdn.net/yyinhai/article/details/52944897">Ubuntu 清理系统日志</a></p>
-<p><a href="https://my.oschina.net/zhangqingcai/blog/23994">清理Ubuntu系统的缓存、垃圾、多余内核</a></p>
+<p><a href="https://my.oschina.net/zhangqingcai/blog/23994">清理 Ubuntu 系统的缓存、垃圾、多余内核</a></p>
 <h2 id="ubuntu-彻底卸载软件">ubuntu 彻底卸载软件</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt autoremove --purge + SoftwareName
 </code></pre></div><h2 id="ubuntu-安装-git">ubuntu 安装 git</h2>
@@ -256,18 +256,48 @@ apt-cache depends mysql
 <p>查询包的反向依赖关系</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 查询包的反向依赖</span>
 apt-cache rdepends mysql
-</code></pre></div><h2 id="查看ubuntu的连接过的wi-fi的密码">查看Ubuntu的连接过的Wi-Fi的密码</h2>
+</code></pre></div><h2 id="查看-ubuntu-的连接过的-wi-fi-的密码">查看 Ubuntu 的连接过的 Wi-Fi 的密码</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /etc/NetworkManager/system-connections <span style="color:#f92672">&amp;&amp;</span> ll
 cat + &lt;Wi-Fi_Name&gt;
 </code></pre></div></li>
 </ul>
 <h2 id="根分区扩容">根分区扩容</h2>
 <p><a href="https://zhuanlan.zhihu.com/p/146554549">参考链接</a></p>
-<h2 id="linux清除日志文件">Linux清除日志文件</h2>
+<h2 id="linux-清除日志文件">Linux 清除日志文件</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">journalctl --disk-usage	<span style="color:#75715e"># 检查日志的大小</span>
 sudo journalctl --vacuum-time<span style="color:#f92672">=</span>&lt;n&gt;d	<span style="color:#75715e"># 清除早于&lt;n&gt;天的日志</span>
 sudo find /var/log/ -type f -mtime +&lt;n&gt; -exec rm -f <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span>	<span style="color:#75715e"># 删除&lt;n天前的旧&gt;</span>
-</code></pre></div>
+</code></pre></div><h2 id="安装-postman">安装 Postman</h2>
+<p><a href="https://blog.csdn.net/gymaisyl/article/details/86573247">参考</a></p>
+<p><a href="https://blog.csdn.net/baifengqing/article/details/80303250">参考</a></p>
+<ul>
+<li>
+<p>Step1: Download Postman</p>
+</li>
+<li>
+<p>Step2: 解压到<code>/opt</code>目录下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo tar -xzvf Postman-linux-x64-X.X.X.tar.gz -C /opt
+sudo ln -s /opt/Postman/app/Postman /usr/bin/postman
+</code></pre></div></li>
+<li>
+<p>Step3: 创建启动项(该步骤失败了，有空的时候再研究一下)</p>
+</li>
+</ul>
+<h2 id="安装-apache-jmeter">安装 Apache Jmeter</h2>
+<ul>
+<li>
+<p>Step1: <a href="https://mirrors.bfsu.edu.cn/apache//jmeter/binaries/apache-jmeter-5.2.1.tgz">Download Jmeter</a></p>
+</li>
+<li>
+<p>Step2: 解压到<code>/opt</code>目录下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo tar -xzvf apache-jmeter-x.x.x.tgz -C /opt
+sudo ln -s /opt/apache-jmeter-x.x.x/bin/jmeter /usr/bin/jmeter
+</code></pre></div></li>
+<li>
+<p>Step3: 创建启动项文件(该步骤失败了，有空的时候再研究一下)</p>
+</li>
+</ul>
+
     </div>
 
     <div class="post-copyright">

@@ -13,7 +13,7 @@
       <pubDate>Wed, 14 Apr 2021 14:47:18 +0800</pubDate>
       
       <guid>https://ByteFlyCoding.github.io/2021/gin_notes/</guid>
-      <description>About Web Web是基于HTTP/HTTPS协议进行交互的应用网络。 Web就是通过使用浏览器/App访问的各种资源。 C/S架构： request(请求</description>
+      <description>About Web Web 是基于 HTTP/HTTPS 协议进行交互的应用网络。 Web 就是通过使用浏览器/App 访问的各种资源。 C/S 架构： request(请求) response(响应) HTTP 轮</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Wed, 31 Mar 2021 20:13:52 +0800</pubDate>
       
       <guid>https://ByteFlyCoding.github.io/2021/golang_notes/</guid>
-      <description>go语言清除go mod 缓存 go clean --modcache</description>
+      <description>go 语言清除 go mod 缓存 go clean --modcache</description>
     </item>
     
   </channel>
